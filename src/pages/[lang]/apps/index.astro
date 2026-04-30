@@ -14,12 +14,14 @@ const apps = [
   {
     key: "checkpoint",
     logo: "/checkpoint-logo.png",
+    image: "/checkpoint-showcase.png",
     tone: "default",
     storeHref: "",
   },
   {
     key: "newen",
     logo: "/newen-logo.png",
+    image: "/newen-showcase.png",
     tone: "newen",
     storeHref: "",
   },
@@ -41,16 +43,8 @@ const apps = [
             const app = t.apps[item.key];
             return (
               <article class="app-card">
-                <div class={`phone-preview ${item.tone}`} aria-label={`${app.name} ${t.appDirectory.screenshotAlt}`}>
-                  <div class="phone-screen">
-                    <img src={item.logo} alt={`${app.name} logo`} />
-                    <span>{app.name}</span>
-                    <div class="phone-lines" aria-hidden="true">
-                      <i></i>
-                      <i></i>
-                      <i></i>
-                    </div>
-                  </div>
+                <div class={`app-card-media ${item.tone}`}>
+                  <img src={item.image} alt={`${app.name} ${t.appDirectory.screenshotAlt}`} loading="lazy" />
                 </div>
                 <div class="app-card-copy">
                   <div class="app-card-heading">
