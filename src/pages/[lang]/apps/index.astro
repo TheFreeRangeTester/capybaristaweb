@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { copy, locales, type Locale } from "../../../i18n";
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Locale;
+const t = copy[lang];
+const apps = [
+  {
+    key: "checkpoint",
+    logo: "/checkpoint-logo.png",
+    tone: "default",
+    storeHref: "",
+  },
+  {
+    key: "newen",
+    logo: "/newen-logo.png",
+    tone: "newen",
+    storeHref: "",
+  },
+] as const;
+---
+
+<BaseLayout title={`${t.appDirectory.title} · Capybarista`} description={t.appDirectory.intro} lang={lang}>
+  <div class="page">
+    <Header lang={lang} labels={t.nav} />
+    <main class="shell">
+      <section class="page-title">
+        <h1>{t.appDirectory.title}</h1>
+        <p>{t.appDirectory.intro}</p>
+      </section>
+
+      <section class="app-gallery" aria-label={t.appDirectory.title}>
+        {
+          apps.map((item) => {
+            const app = t.apps[item.key];
+            return (
+              <article class="app-card">
+                <div class={`phone-preview ${item.tone}`} aria-label={`${app.name} ${t.appDirectory.screenshotAlt}`}>
+                  <div class="phone-screen">
+                    <img src={item.logo} alt={`${app.name} logo`} />
+                    <span>{app.name}</span>
+                    <div class="phone-lines" aria-hidden="true">
+                      <i></i>
+                      <i></i>
+                      <i></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="app-card-copy">
+                  <div class="app-card-heading">
+                    <img class="app-card-logo" src={item.logo} alt="" aria-hidden="true" />
+                    <h2>{app.name}</h2>
+                  </div>
+                  <p>{app.description}</p>
+                  <div class="meta-row" aria-label={`Tags ${app.name}`}>
+                    {app.tags.map((tag) => (
+                      <span class="chip">{tag}</span>
+                    ))}
+                  </div>
+                  <div class="app-card-actions">
+                    {
+                      item.storeHref ? (
+                        <a class="button" href={item.storeHref} target="_blank" rel="noreferrer">
+                          App Store
+                        </a>
+                      ) : (
+                        <span class="button disabled" aria-disabled="true">{t.appDirectory.appStoreSoon}</span>
+                      )
+                    }
+                    <a class="button secondary" href={`/${lang}/apps/${item.key}/`}>
+                      {t.appDirectory.learnMore}
+                    </a>
+                  </div>
+                </div>
+              </article>
+            );
+          })
+        }
+      </section>
+    </main>
+    <Footer lang={lang} labels={t.nav} />
+  </div>
+</BaseLayout>

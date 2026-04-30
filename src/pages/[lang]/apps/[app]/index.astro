@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Header.astro";
+import Footer from "../../../../components/Footer.astro";
+import { copy, locales, type Locale } from "../../../../i18n";
+
+type AppKey = "checkpoint" | "newen";
+
+export function getStaticPaths() {
+  const appKeys = ["checkpoint", "newen"] as const;
+  return locales.flatMap((lang) => appKeys.map((app) => ({ params: { lang, app } })));
+}
+
+const lang = Astro.params.lang as Locale;
+const app = Astro.params.app as AppKey;
+const t = copy[lang];
+const appCopy = t.apps[app];
+const guideHref =
+  app === "checkpoint"
+    ? `/${lang}/blog/checkpoint/primer-checkpoint/`
+    : `/${lang}/blog/newen/rutina-ligera/`;
+const guideTitle = app === "checkpoint" ? t.posts.checkpoint.title : t.posts.newen.title;
+---
+
+<BaseLayout title={`${appCopy.name} · Capybarista`} description={appCopy.description} lang={lang}>
+  <div class="page">
+    <Header lang={lang} labels={t.nav} />
+    <main class="shell">
+      <section class="page-title">
+        <h1>{appCopy.detailTitle}</h1>
+        <p>{appCopy.detailIntro}</p>
+      </section>
+      <article class="content">
+        <h2>{appCopy.purposeTitle}</h2>
+        <p>{appCopy.purpose}</p>
+        <h2>{t.apps.guidesTitle}</h2>
+        <p><a href={guideHref}>{guideTitle}</a></p>
+        <h2>{t.apps.privacyTitle}</h2>
+        <p>
+          {t.apps.privacyText}
+          <a href={`/${lang}/privacy-policy/`}>{t.nav.privacyPolicy}</a>.
+        </p>
+      </article>
+    </main>
+    <Footer lang={lang} labels={t.nav} />
+  </div>
+</BaseLayout>

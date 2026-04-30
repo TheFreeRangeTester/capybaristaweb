@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import SocialIconLink from "../../components/SocialIconLink.astro";
+import { copy, locales, type Locale } from "../../i18n";
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const lang = Astro.params.lang as Locale;
+const t = copy[lang];
+const socials = [
+  { name: "LinkedIn", href: "https://www.linkedin.com/in/patricio-m-690b3729/" },
+  { name: "YouTube", href: "https://www.youtube.com/@FreeRangeTesters" },
+] as const;
+---
+
+<BaseLayout title={t.meta.homeTitle} description={t.meta.homeDescription} lang={lang}>
+  <div class="page">
+    <Header lang={lang} labels={t.nav} />
+    <main>
+      <section class="shell hero">
+        <div class="hero-atmosphere" aria-hidden="true">
+          <img src="/lofi-room.jpg" alt="" />
+        </div>
+        <div class="hero-copy">
+          <div class="hero-brand-lockup">
+            <h1>{t.home.heroTitle}</h1>
+          </div>
+          <p>{t.home.intro}</p>
+          <div class="hero-actions">
+            <a class="button" href={`/${lang}/apps/`}>{t.home.explore}</a>
+            <a class="button secondary" href={`/${lang}/blog/`}>{t.home.readBlog}</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true"></div>
+      </section>
+
+      <section class="section about-founder" id="about">
+        <div class="shell about-founder-inner">
+          <div class="about-founder-copy">
+            <h2>{t.home.aboutTitle}</h2>
+            <p>{t.home.aboutText}</p>
+            <p>{t.home.aboutNote}</p>
+            <div class="social-links" aria-label={t.home.socialLabel}>
+              <span>{t.home.socialLabel}</span>
+              {
+                socials.map((social) => (
+                  <SocialIconLink name={social.name} href={social.href} />
+                ))
+              }
+            </div>
+          </div>
+          <div class="about-founder-media">
+            <figure class="about-founder-photo">
+              <img
+                src="/founder-new-zealand.jpg"
+                alt={t.home.aboutPhotoAlt}
+                loading="lazy"
+                width="1200"
+                height="1600"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <Footer lang={lang} labels={t.nav} />
+  </div>
+</BaseLayout>

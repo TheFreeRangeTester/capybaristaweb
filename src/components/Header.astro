@@ -1,0 +1,58 @@
+---
+import { localeNames, locales, localeSwitchActions, localeSwitchLabels, type Locale } from "../i18n";
+
+interface Props {
+  lang: Locale;
+  labels: {
+    apps: string;
+    blog: string;
+  };
+}
+
+const { lang = "es", labels } = Astro.props;
+const locale = lang as Locale;
+const currentPath = Astro.url.pathname;
+
+function hrefFor(targetLocale: Locale) {
+  if (targetLocale === locale) return currentPath;
+
+  const localizedPath = currentPath.replace(`/${locale}`, `/${targetLocale}`);
+  if (localizedPath !== currentPath) return localizedPath;
+  if (currentPath === "/privacy-policy/") return `/${targetLocale}/privacy-policy/`;
+  return `/${targetLocale}/`;
+}
+---
+
+<header class="site-header">
+  <nav class="shell nav" aria-label="Principal">
+    <a class="brand-link" href={`/${locale}/`}>
+      <span class="brand-mark" aria-label="Capybarista"></span>
+      <span class="brand-name">Capybarista</span>
+    </a>
+    <div class="nav-links">
+      <a href={`/${locale}/apps/`}>{labels.apps}</a>
+      <a href={`/${locale}/blog/`}>{labels.blog}</a>
+      <div class="language-switch" aria-label="Language">
+        {
+          locales.map((targetLocale) =>
+            targetLocale === locale ? (
+              <span class="language-option active" aria-current="true" title={localeNames[targetLocale]}>
+                {localeSwitchLabels[targetLocale]}
+              </span>
+            ) : (
+              <a
+                class="language-option"
+                href={hrefFor(targetLocale)}
+                hreflang={targetLocale}
+                aria-label={localeSwitchActions[targetLocale]}
+                title={localeSwitchActions[targetLocale]}
+              >
+                {localeSwitchLabels[targetLocale]}
+              </a>
+            ),
+          )
+        }
+      </div>
+    </div>
+  </nav>
+</header>

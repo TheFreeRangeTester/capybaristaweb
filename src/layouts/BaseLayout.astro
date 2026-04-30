@@ -1,0 +1,24 @@
+---
+const {
+  title = "Capybarista",
+  description = "Apps iOS independientes, minimalistas y pensadas para el uso diario.",
+  lang = "es",
+} = Astro.props;
+
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link rel="icon" type="image/png" href="/capybarista-logo.png" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

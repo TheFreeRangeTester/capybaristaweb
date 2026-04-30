@@ -1,0 +1,28 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  href: string;
+  tone?: string;
+  tags?: string[];
+  cta: string;
+  logoSrc?: string;
+}
+
+const { name, description, href, tone = "default", tags = [], cta, logoSrc } = Astro.props;
+const initials = name.slice(0, 2);
+---
+
+<article class="app-panel">
+  <div class:list={["app-icon", tone]} aria-hidden={logoSrc ? undefined : "true"}>
+    {logoSrc ? <img src={logoSrc} alt={`${name} logo`} /> : initials}
+  </div>
+  <div>
+    <h3>{name}</h3>
+    <p>{description}</p>
+    <div class="meta-row" aria-label={`Características de ${name}`}>
+      {tags.map((tag) => <span class="chip">{tag}</span>)}
+    </div>
+  </div>
+  <a class="button secondary" href={href}>{cta}</a>
+</article>
