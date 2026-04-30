@@ -51,12 +51,6 @@ const apps = [
                     <img class="app-card-logo" src={item.logo} alt="" aria-hidden="true" />
                     <h2>{app.name}</h2>
                   </div>
-                  <p>{app.description}</p>
-                  <div class="meta-row" aria-label={`Tags ${app.name}`}>
-                    {app.tags.map((tag) => (
-                      <span class="chip">{tag}</span>
-                    ))}
-                  </div>
                   <div class="app-card-actions">
                     {
                       item.storeHref ? (
