@@ -123,22 +123,89 @@ export const copy = {
         ],
       },
       newen: {
-        title: "Registrar un mood sin sobrepensarlo",
+        title: "Cómo sacarle el máximo a Newen",
         excerpt:
-          "Ideas para usar Newen como una pausa breve y honesta durante el dia.",
-        intro: "Una guia breve para observar tu estado sin convertirlo en tarea.",
+          "Recomendaciones para obtener insights reales sin convertir el registro emocional en otra obligación.",
+        intro:
+          "Newen está diseñada para ser simple. Sin fricción. Sin ruido. Pero el verdadero valor aparece en cómo la usás con el tiempo.",
+        image: "/newen-guide-es.png",
+        imageAlt: "Guía visual en español para sacarle el máximo provecho a Newen",
         sections: [
           {
-            title: "Elige un momento tranquilo",
-            body: "Puede ser al empezar el dia, despues de trabajar o antes de dormir. Lo importante es que el registro sea facil de repetir.",
+            title: "1. Priorizá la consistencia, no la perfección",
+            body: [
+              "No necesitás cargar todo perfecto.",
+              "Lo importante es ser constante.",
+              "Incluso unos pocos registros por día ya empiezan a mostrar patrones, y ahí es donde está el valor.",
+            ],
           },
           {
-            title: "Nombra lo que aparece",
-            body: "Registra energia, animo y una nota corta si hace falta. Newen esta para observar, no para juzgar.",
+            title: "2. Usá recordatorios (si te sirven)",
+            body: [
+              "Podés usar Newen sin ningún recordatorio.",
+              "Pero si querés estructura, podés configurar hasta 3 por día.",
+              "Una configuración simple que recomiendo:",
+            ],
+            bullets: ["uno a la mañana", "uno a mitad del día", "uno a la noche"],
+            after:
+              "Esto te da una visión más completa del día, no solo de cómo terminó. Porque tendemos a recordar la última emoción, no todo el recorrido.",
           },
           {
-            title: "Mira patrones con calma",
-            body: "Con el tiempo aparecen senales: horarios, lugares, habitos o cargas que influyen en como te sientes.",
+            title: "3. No estás limitado a 3 registros por día",
+            body: [
+              "Los recordatorios son solo eso: recordatorios.",
+              "Podés cargar todos los estados emocionales que quieras.",
+              "De hecho, es útil hacerlo cuando pasa algo relevante:",
+            ],
+            bullets: [
+              "una reunión estresante",
+              "una buena charla",
+              "un momento que te quedó marcado",
+            ],
+            after:
+              "Eso le da contexto a tus datos. Y con el tiempo, ese contexto se transforma en patrones.",
+          },
+          {
+            title: "4. Las notas no son obligatorias, pero ayudan mucho",
+            body: [
+              "No tenés que escribir si no querés.",
+              "Pero una nota corta puede marcar la diferencia.",
+              "Cuando mires semanas o meses atrás, no solo vas a ver cómo te sentías: vas a recordar por qué.",
+              "Eso convierte datos en entendimiento real.",
+            ],
+          },
+          {
+            title: "5. Tomate tiempo para reflexionar sobre tus patrones",
+            body: [
+              "Newen detecta patrones, pero el impacto real viene de reflexionar sobre ellos.",
+              "Tomate un momento cada tanto y preguntate:",
+            ],
+            bullets: [
+              "¿Tiene sentido este patrón?",
+              "¿Es algo que quiero cambiar?",
+              "¿Qué puede estar causándolo?",
+            ],
+            after:
+              "Hacelo con calma. Sin distracciones. A veces no pasa nada. A veces hace click. Ahí empieza el cambio.",
+          },
+          {
+            title: "6. Si tenés Apple Watch, aprovechalo",
+            body: [
+              "Si tenés Apple Watch, todo es más rápido.",
+              "Podés registrar estados en segundos, sin fricción.",
+              "Y también podés hacer sesiones de reflexión:",
+            ],
+            bullets: ["30 segundos", "1 minuto", "o más"],
+            after:
+              "Misma recomendación: sin distracciones, con calma. Es un hábito chico que puede generar insights grandes.",
+          },
+          {
+            title: "Cierre",
+            body: [
+              "Newen no te dice qué hacer.",
+              "Te ayuda a ver lo que ya está pasando.",
+              "Y con un poco de consistencia, vas a empezar a notar patrones que siempre estuvieron ahí, solo que no los estabas mirando.",
+            ],
           },
         ],
       },
@@ -296,22 +363,89 @@ export const copy = {
         ],
       },
       newen: {
-        title: "Track a mood without overthinking it",
+        title: "How to get the most out of Newen",
         excerpt:
-          "Ideas for using Newen as a brief and honest pause during the day.",
-        intro: "A short guide for observing your state without turning it into a chore.",
+          "Recommendations for getting meaningful insights without turning mood tracking into another chore.",
+        intro:
+          "Newen is simple by design. No friction, no noise. But the real value comes from how you use it over time.",
+        image: "/newen-guide-en.png",
+        imageAlt: "English visual guide for getting the most out of Newen",
         sections: [
           {
-            title: "Choose a quiet moment",
-            body: "It can be morning, after work, or before sleep. What matters is that the check-in is easy to repeat.",
+            title: "1. Focus on consistency, not perfection",
+            body: [
+              "You don’t need to log everything perfectly.",
+              "What matters is showing up consistently.",
+              "Even just a few check-ins per day can reveal patterns over time, and those patterns are where the value is.",
+            ],
           },
           {
-            title: "Name what is present",
-            body: "Record energy, mood, and a short note if needed. Newen is there to observe, not to judge.",
+            title: "2. Use reminders (if they help you)",
+            body: [
+              "You can use Newen without any reminders at all.",
+              "But if you want a bit of structure, you can set up to 3 per day.",
+              "A simple setup I recommend:",
+            ],
+            bullets: ["one in the morning", "one in the middle of the day", "one at night"],
+            after:
+              "This gives you a more complete picture of your day, not just how it ended. Because we tend to remember the last emotion, not the full journey.",
           },
           {
-            title: "Notice patterns calmly",
-            body: "Over time, signals appear: times, places, habits, or loads that influence how you feel.",
+            title: "3. You’re not limited to 3 entries per day",
+            body: [
+              "Reminders are just prompts, not limits.",
+              "You can log as many emotional states as you want.",
+              "In fact, it’s especially useful when something meaningful happens:",
+            ],
+            bullets: [
+              "a stressful meeting",
+              "a great conversation",
+              "a moment that stands out",
+            ],
+            after:
+              "These moments give context to your data. And over time, that context becomes patterns.",
+          },
+          {
+            title: "4. Notes are optional, but powerful",
+            body: [
+              "You don’t have to write anything.",
+              "But adding a short note can make a big difference.",
+              "When you look back weeks or months later, you won’t just see how you felt: you’ll remember why.",
+              "That’s the difference between vague memories and real understanding.",
+            ],
+          },
+          {
+            title: "5. Take time to reflect on your patterns",
+            body: [
+              "Newen surfaces patterns for you, but the real impact comes from reflecting on them.",
+              "Take a moment, every now and then, to pause and think:",
+            ],
+            bullets: [
+              "Does this pattern make sense?",
+              "Is this something I want to change?",
+              "What might be causing this?",
+            ],
+            after:
+              "Do it calmly. Without distractions. Sometimes nothing happens. Sometimes something clicks. That’s where change starts.",
+          },
+          {
+            title: "6. If you have an Apple Watch, use it",
+            body: [
+              "If you do have an Apple Watch, it makes everything faster.",
+              "You can log your mood in seconds, no friction, no distractions.",
+              "And you can also start quick reflection sessions:",
+            ],
+            bullets: ["30 seconds", "1 minute", "or longer"],
+            after:
+              "Same recommendation as before: do it calmly, without interruptions. It’s a small habit that can unlock surprisingly deep insights.",
+          },
+          {
+            title: "Final thought",
+            body: [
+              "Newen won’t tell you what to do.",
+              "It helps you see what’s already happening.",
+              "And with just a bit of consistency, you’ll start noticing patterns that were always there, you just weren’t paying attention.",
+            ],
           },
         ],
       },
