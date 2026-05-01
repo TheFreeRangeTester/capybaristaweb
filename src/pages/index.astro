@@ -1,14 +1,22 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+const defaultPath = "/es/";
 ---
 
-<BaseLayout title="Capybarista · Apps for iOS">
-  <main class="language-gate">
-    <img src="/capybarista-logo.png" alt="Capybarista" />
-    <h1>Capybarista</h1>
-    <div class="hero-actions">
-      <a class="button" href="/es/">Español</a>
-      <a class="button secondary" href="/en/">English</a>
-    </div>
-  </main>
-</BaseLayout>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, follow" />
+    <meta http-equiv="refresh" content={`0; url=${defaultPath}`} />
+    <title>Capybarista</title>
+    <script is:inline>
+      const preferredLocale = navigator.languages?.some((language) => language.toLowerCase().startsWith("en"))
+        ? "en"
+        : "es";
+
+      window.location.replace(`/${preferredLocale}/`);
+    </script>
+  </head>
+  <body></body>
+</html>
