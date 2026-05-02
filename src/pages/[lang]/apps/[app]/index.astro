@@ -15,6 +15,8 @@ const lang = Astro.params.lang as Locale;
 const app = Astro.params.app as AppKey;
 const t = copy[lang];
 const appCopy = t.apps[app];
+const newenSections = app === "newen" ? t.apps.newen.sections : null;
+const appStoreHref = app === "newen" ? "https://apps.apple.com/nz/app/newen/id6765529178" : "";
 const guideHref =
   app === "checkpoint"
     ? `/${lang}/blog/checkpoint/primer-checkpoint/`
@@ -29,18 +31,101 @@ const guideTitle = app === "checkpoint" ? t.posts.checkpoint.title : t.posts.new
       <section class="page-title">
         <h1>{appCopy.detailTitle}</h1>
         <p>{appCopy.detailIntro}</p>
+        {
+          appStoreHref && (
+            <div class="page-title-actions">
+              <a class="button" href={appStoreHref} target="_blank" rel="noreferrer">
+                App Store
+              </a>
+            </div>
+          )
+        }
       </section>
-      <article class="content">
-        <h2>{appCopy.purposeTitle}</h2>
-        <p>{appCopy.purpose}</p>
-        <h2>{t.apps.guidesTitle}</h2>
-        <p><a href={guideHref}>{guideTitle}</a></p>
-        <h2>{t.apps.privacyTitle}</h2>
-        <p>
-          {t.apps.privacyText}
-          <a href={`/${lang}/privacy-policy/`}>{t.nav.privacyPolicy}</a>.
-        </p>
-      </article>
+      {
+        newenSections ? (
+          <article class="product-detail newen-detail">
+            <section class="product-intro">
+              <div>
+                <img class="product-logo" src="/newen-logo.png" alt="" aria-hidden="true" />
+                <h2>{appCopy.purposeTitle}</h2>
+              </div>
+              <p>{appCopy.purpose}</p>
+            </section>
+
+            <section class="product-section split">
+              <div>
+                <h2>{newenSections.rhythmTitle}</h2>
+                <p>{newenSections.rhythmText}</p>
+              </div>
+              <div class="feature-stack">
+                {newenSections.rhythmItems.map((item) => (
+                  <article class="feature-line">
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section class="product-section privacy-feature">
+              <div class="privacy-copy">
+                <h2>{newenSections.privacyTitle}</h2>
+                <p>{newenSections.privacyText}</p>
+                <ul class="check-list">
+                  {newenSections.privacyPoints.map((point) => <li>{point}</li>)}
+                </ul>
+              </div>
+              <figure class="privacy-visual">
+                <img
+                  src={newenSections.privacyImage}
+                  alt={newenSections.privacyImageAlt}
+                  loading="lazy"
+                  width="872"
+                  height="1804"
+                />
+              </figure>
+            </section>
+
+            <section class="product-section watch-section">
+              <div>
+                <h2>{newenSections.watchTitle}</h2>
+                <p>{newenSections.watchText}</p>
+              </div>
+              <ul class="watch-list">
+                {newenSections.watchItems.map((item) => <li>{item}</li>)}
+              </ul>
+            </section>
+
+            <section class="guide-band">
+              <div>
+                <h2>{t.apps.guidesTitle}</h2>
+                <p>{guideTitle}</p>
+              </div>
+              <a class="button" href={guideHref}>{newenSections.guideCta}</a>
+            </section>
+
+            <section class="product-section compact-privacy">
+              <h2>{t.apps.privacyTitle}</h2>
+              <p>
+                {t.apps.privacyText}
+                <a href={`/${lang}/privacy-policy/`}>{t.nav.privacyPolicy}</a>.
+              </p>
+            </section>
+          </article>
+        ) : (
+          <article class="content">
+            <h2>{appCopy.purposeTitle}</h2>
+            <p>{appCopy.purpose}</p>
+            <h2>{t.apps.guidesTitle}</h2>
+            <p><a href={guideHref}>{guideTitle}</a></p>
+            <h2>{t.apps.privacyTitle}</h2>
+            <p>
+              {t.apps.privacyText}
+              <a href={`/${lang}/privacy-policy/`}>{t.nav.privacyPolicy}</a>.
+            </p>
+          </article>
+        )
+      }
     </main>
     <Footer lang={lang} labels={t.nav} />
   </div>

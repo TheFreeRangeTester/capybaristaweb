@@ -96,6 +96,46 @@ export const copy = {
         purposeTitle: "Para que sirve",
         purpose:
           "Newen ayuda a registrar como te sientes y descubrir patrones sin presion. La idea es que puedas pausar, nombrar lo que pasa y seguir con mas claridad.",
+        sections: {
+          rhythmTitle: "Registrar sin convertirlo en tarea",
+          rhythmText:
+            "Newen esta pensada para capturar un momento emocional en segundos: eliges como te sientes, sumas contexto si hace falta y sigues con tu dia. No necesitas escribir un diario largo ni completar formularios eternos.",
+          rhythmItems: [
+            {
+              title: "Estados claros",
+              body: "Elige entre emociones simples y reconocibles para que el registro sea rapido incluso cuando no tienes energia para explicar demasiado.",
+            },
+            {
+              title: "Contexto opcional",
+              body: "Agrega una nota corta cuando algo importe: una reunion, una conversacion, un descanso, una buena noticia o un dia pesado.",
+            },
+            {
+              title: "Patrones visibles",
+              body: "Con el tiempo, Newen te ayuda a mirar tendencias, dias recurrentes y cambios de energia sin juzgar lo que aparece.",
+            },
+          ],
+          privacyTitle: "Privada, local y protegida",
+          privacyText:
+            "Tus registros son tuyos. Newen no necesita cuentas, no usa tracking y no convierte tus emociones en datos para publicidad. La experiencia esta disenada para que puedas observarte con calma y confianza.",
+          privacyImage: "/newen-privacy-es.png",
+          privacyImageAlt: "Resumen visual de privacidad de Newen: datos locales, sin cuentas, Face ID, iCloud y uso offline",
+          privacyPoints: [
+            "Sin cuentas, emails ni perfiles externos.",
+            "Datos guardados localmente en tu dispositivo.",
+            "Sin anuncios, sin tracking y sin recopilacion de datos.",
+            "Bloqueo con Face ID para sumar una capa de privacidad.",
+            "Sincronizacion opcional entre dispositivos mediante iCloud.",
+          ],
+          watchTitle: "Tambien en Apple Watch",
+          watchText:
+            "Cuando tienes Apple Watch, Newen se vuelve todavia mas ligera: puedes registrar un estado desde la muneca y hacer micro sesiones de reflexion sin sacar el telefono.",
+          watchItems: [
+            "Registros rapidos cuando algo acaba de pasar.",
+            "Reflexiones breves de 30 segundos a 2 minutos.",
+            "Una forma menos invasiva de mantener consistencia durante el dia.",
+          ],
+          guideCta: "Leer guia de uso",
+        },
       },
       guidesTitle: "Guias",
       privacyTitle: "Privacidad",
@@ -195,7 +235,7 @@ export const copy = {
               "Podés registrar estados en segundos, sin fricción.",
               "Y también podés hacer sesiones de reflexión:",
             ],
-            bullets: ["30 segundos", "1 minuto", "o más"],
+            bullets: ["30 segundos", "1 minuto", "2 minutos"],
             after:
               "Misma recomendación: sin distracciones, con calma. Es un hábito chico que puede generar insights grandes.",
           },
@@ -336,6 +376,46 @@ export const copy = {
         purposeTitle: "What it is for",
         purpose:
           "Newen helps you record how you feel and discover patterns without pressure. Pause, name what is happening, and continue with more clarity.",
+        sections: {
+          rhythmTitle: "Log without turning it into a chore",
+          rhythmText:
+            "Newen is designed to capture an emotional moment in seconds: choose how you feel, add context when it helps, and continue with your day. No long journaling session or endless form required.",
+          rhythmItems: [
+            {
+              title: "Clear states",
+              body: "Pick from simple, recognizable emotions so logging stays fast even when you do not have the energy to explain everything.",
+            },
+            {
+              title: "Optional context",
+              body: "Add a short note when something matters: a meeting, a conversation, a break, good news, or a heavy day.",
+            },
+            {
+              title: "Visible patterns",
+              body: "Over time, Newen helps you look at trends, recurring days, and energy shifts without judging what shows up.",
+            },
+          ],
+          privacyTitle: "Private, local, and protected",
+          privacyText:
+            "Your entries are yours. Newen does not require accounts, does not use tracking, and does not turn your emotions into advertising data. The experience is built so you can observe yourself calmly and confidently.",
+          privacyImage: "/newen-privacy-es.png",
+          privacyImageAlt: "Newen privacy overview: local data, no accounts, Face ID, iCloud, and offline use",
+          privacyPoints: [
+            "No accounts, emails, or external profiles.",
+            "Data stored locally on your device.",
+            "No ads, no tracking, and no data collection.",
+            "Face ID lock for an extra privacy layer.",
+            "Optional device sync through iCloud.",
+          ],
+          watchTitle: "Also on Apple Watch",
+          watchText:
+            "With Apple Watch, Newen becomes even lighter: log a state from your wrist and start tiny reflection sessions without picking up your phone.",
+          watchItems: [
+            "Quick logs right after something happens.",
+            "Short reflection sessions from 30 seconds to 2 minutes.",
+            "A less intrusive way to stay consistent throughout the day.",
+          ],
+          guideCta: "Read usage guide",
+        },
       },
       guidesTitle: "Guides",
       privacyTitle: "Privacy",
@@ -435,7 +515,7 @@ export const copy = {
               "You can log your mood in seconds, no friction, no distractions.",
               "And you can also start quick reflection sessions:",
             ],
-            bullets: ["30 seconds", "1 minute", "or longer"],
+            bullets: ["30 seconds", "1 minute", "2 minutes"],
             after:
               "Same recommendation as before: do it calmly, without interruptions. It’s a small habit that can unlock surprisingly deep insights.",
           },
