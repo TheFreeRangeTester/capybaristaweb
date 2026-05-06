@@ -143,22 +143,74 @@ export const copy = {
     },
     posts: {
       checkpoint: {
-        title: "Como guardar tu primer checkpoint",
+        title: "Cómo guardar tu primer checkpoint",
         excerpt:
-          "Una guia breve para dejar una partida lista para retomar aunque pasen dias o semanas.",
-        intro: "Una forma rapida de guardar contexto antes de cerrar un juego.",
+          "Una guía breve para dejar una partida lista para retomar aunque pasen días o semanas.",
+        intro:
+          "Una forma rápida de guardar el contexto de una partida cuando la vida no siempre te deja jugar seguido.",
+        galleryLabel: "Capturas de Checkpoint",
+        gallery: [
+          {
+            src: "/checkpoint-blog-library.png",
+            alt: "Lista de juegos en Checkpoint con tareas activas y partidas recientes",
+            caption: "Tu biblioteca muestra qué juegos tienen contexto listo para retomar.",
+          },
+          {
+            src: "/checkpoint-blog-detail.png",
+            alt: "Detalle de una partida de Zelda Oracle of Ages con objetivo, notas y recurso guardado",
+            caption: "Cada juego guarda objetivo actual, última sesión, notas y recursos.",
+          },
+          {
+            src: "/checkpoint-blog-summary.png",
+            alt: "Resumen editable de Zelda Oracle of Ages dentro de Checkpoint",
+            caption: "Un resumen rápido ayuda a volver sin tener que reconstruir todo de memoria.",
+          },
+          {
+            src: "/checkpoint-blog-add-game.png",
+            alt: "Pantalla para agregar Bloodborne con sugerencias y selector de portada",
+            caption: "Agregar una partida nueva es simple: nombre, portada y contexto inicial.",
+          },
+        ],
         sections: [
           {
-            title: "Elige el juego",
-            body: "Empieza con una partida que estes alternando con otras. Checkpoint brilla cuando hay distancia entre una sesion y la siguiente.",
+            title: "Por qué creé Checkpoint",
+            body: [
+              "La idea nació de una situación bastante concreta: soy padre de familia, tengo un trabajo full time y no siempre puedo dedicarle a los videojuegos el tiempo que me gustaría.",
+              "Me pasaba que retomaba un juego que me encantaba y, en vez de volver directo a disfrutarlo, tenía que reconstruir dónde lo había dejado, qué estaba buscando, qué estaba farmeando o cuál era esa cosita próxima que quería hacer.",
+              "No me hacía ilusión navegar mil logs de quests, abrir guías intentando adivinar en qué punto estaba o perder los primeros veinte minutos de una sesión corta tratando de recordar mi propio plan.",
+            ],
           },
           {
-            title: "Guarda el contexto",
-            body: "Anota donde estas, cual era el objetivo y cualquier pista importante. Dos lineas buenas valen mas que una nota larga que nunca vuelves a leer.",
+            title: "Qué guardar antes de cerrar",
+            body: [
+              "Checkpoint existe para capturar lo mínimo que necesitas antes de apagar la consola: dónde estás, cuál es el objetivo actual, qué hiciste en la última sesión y qué recurso o guía conviene tener a mano.",
+              "La clave no es escribir una novela. Dos o tres líneas claras valen mucho más que una nota larga que nunca vas a volver a leer.",
+            ],
+            bullets: [
+              "Objetivo actual: una acción concreta para la próxima sesión.",
+              "Última sesión: qué acabas de hacer y dónde quedaste.",
+              "Notas: pistas, decisiones pendientes o cosas que no quieres olvidar.",
+              "Recursos: una guía, mapa o referencia que ya encontraste y no quieres buscar de nuevo.",
+            ],
           },
           {
-            title: "Deja una proxima accion",
-            body: "Cierra con algo concreto: hablar con un NPC, volver a una zona, mejorar equipo o revisar una mision. Ese detalle hace que volver sea facil.",
+            title: "Volver sin fricción",
+            body: [
+              "Gracias a ese pequeño ritual, hoy puedo ir progresando en The Legend of Zelda: Oracle of Ages, Sekiro, Tears of the Kingdom y muchos juegos más, cambiando de contexto sin sentir que estoy empezando de cero cada vez.",
+              "Cuando tengo treinta minutos libres, abro Checkpoint, leo mi próxima acción y entro al juego con intención. Ese es el objetivo: menos administración, más juego.",
+            ],
+          },
+          {
+            title: "Tu primer checkpoint",
+            body: "Para empezar, elige un juego que tengas abandonado y crea una entrada sencilla. No intentes documentarlo todo. Solo deja una pista suficientemente buena para tu yo del futuro.",
+            bullets: [
+              "Escribe una próxima acción concreta.",
+              "Agrega una nota corta con el contexto de la última sesión.",
+              "Guarda una guía o recurso si ya sabes que lo vas a necesitar.",
+              "Cuando vuelvas, revisa ese checkpoint antes de abrir el juego.",
+            ],
+            after:
+              "Si después de leerlo puedes volver a jugar sin perder tiempo recordando, el checkpoint ya cumplió su trabajo.",
           },
         ],
       },
@@ -426,19 +478,71 @@ export const copy = {
         title: "How to save your first checkpoint",
         excerpt:
           "A short guide for leaving a game ready to resume even after days or weeks away.",
-        intro: "A quick way to save context before closing a game.",
+        intro:
+          "A quick way to save the context of a playthrough when life does not always leave you with long gaming sessions.",
+        galleryLabel: "Checkpoint screenshots",
+        gallery: [
+          {
+            src: "/checkpoint-blog-library.png",
+            alt: "Checkpoint game list with active tasks and recently played games",
+            caption: "Your library shows which games already have context ready to resume.",
+          },
+          {
+            src: "/checkpoint-blog-detail.png",
+            alt: "Zelda Oracle of Ages detail screen with objective, notes, and a saved resource",
+            caption: "Each game keeps the current objective, last session, notes, and resources together.",
+          },
+          {
+            src: "/checkpoint-blog-summary.png",
+            alt: "Editable Zelda Oracle of Ages summary inside Checkpoint",
+            caption: "A quick summary helps you come back without rebuilding everything from memory.",
+          },
+          {
+            src: "/checkpoint-blog-add-game.png",
+            alt: "Add Game screen for Bloodborne with suggestions and cover picker",
+            caption: "Adding a new playthrough is simple: name, cover, and the first bit of context.",
+          },
+        ],
         sections: [
           {
-            title: "Choose the game",
-            body: "Start with a playthrough you are switching in and out of. Checkpoint shines when there is distance between one session and the next.",
+            title: "Why I built Checkpoint",
+            body: [
+              "Checkpoint came from a very real problem in my own life: I am a dad, I work full time, and I do not always have as much time for videogames as I would like.",
+              "I kept coming back to games I loved only to realize I had no idea where I left off, what I was looking for, what I was farming, or what small next thing I had planned to do.",
+              "I did not want to dig through endless quest logs or open guides just to reverse-engineer where past me had stopped. When a session is short, spending the first twenty minutes remembering your plan feels terrible.",
+            ],
           },
           {
-            title: "Save the context",
-            body: "Write where you are, what the objective was, and any important clue. Two useful lines are better than a long note you never read again.",
+            title: "What to save before closing",
+            body: [
+              "Checkpoint is built around saving the minimum useful context before you put the controller down: where you are, the current objective, what happened in the last session, and any resource or guide you already found.",
+              "The goal is not to write a novel. Two or three clear lines are more useful than a long note you will never read again.",
+            ],
+            bullets: [
+              "Current objective: one concrete action for the next session.",
+              "Last session: what you just did and where you stopped.",
+              "Notes: clues, pending decisions, or details you do not want to forget.",
+              "Resources: a guide, map, or reference you already found and do not want to search for again.",
+            ],
           },
           {
-            title: "Leave one next action",
-            body: "End with something concrete: talk to an NPC, return to an area, improve gear, or review a quest. That detail makes coming back easy.",
+            title: "Coming back without friction",
+            body: [
+              "Thanks to that small ritual, I am now making progress in The Legend of Zelda: Oracle of Ages, Sekiro, Tears of the Kingdom, and many more games, switching context without feeling like I am starting from zero every time.",
+              "When I get thirty free minutes, I open Checkpoint, read the next action, and jump into the game with intention. That is the whole point: less administration, more playing.",
+            ],
+          },
+          {
+            title: "Your first checkpoint",
+            body: "To start, pick one game you have left hanging and create a simple entry. Do not try to document everything. Just leave a good enough trail for your future self.",
+            bullets: [
+              "Write one concrete next action.",
+              "Add a short note with the context from your last session.",
+              "Save a guide or resource if you already know you will need it.",
+              "When you return, review that checkpoint before opening the game.",
+            ],
+            after:
+              "If reading it lets you start playing without wasting time remembering, the checkpoint did its job.",
           },
         ],
       },

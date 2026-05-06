@@ -969,6 +969,33 @@ img {
   box-shadow: var(--shadow);
 }
 
+.post-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin: 0 0 52px;
+}
+
+.post-gallery figure {
+  margin: 0;
+}
+
+.post-gallery img {
+  width: 100%;
+  border: 1px solid rgba(95, 65, 40, 0.12);
+  border-radius: 18px;
+  background: rgba(255, 250, 242, 0.64);
+  box-shadow: 0 22px 70px rgba(74, 52, 32, 0.14);
+}
+
+.post-gallery figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 650;
+  line-height: 1.45;
+}
+
 .post-section {
   border-top: 1px solid rgba(95, 65, 40, 0.14);
   padding-top: 2px;
@@ -1298,6 +1325,10 @@ img {
   }
 
   .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .post-gallery {
     grid-template-columns: 1fr;
   }
 }

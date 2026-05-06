@@ -39,6 +39,16 @@ function asParagraphs(body: string | string[]) {
             <img src={post.image} alt={post.imageAlt} loading="eager" decoding="async" />
           </figure>
         )}
+        {"gallery" in post && post.gallery && (
+          <div class="post-gallery" aria-label={post.galleryLabel}>
+            {post.gallery.map((item) => (
+              <figure>
+                <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+                <figcaption>{item.caption}</figcaption>
+              </figure>
+            ))}
+          </div>
+        )}
         {post.sections.map((section) => (
           <section class="post-section">
             <h2>{section.title}</h2>
