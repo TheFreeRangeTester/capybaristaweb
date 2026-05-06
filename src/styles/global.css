@@ -58,6 +58,12 @@ img {
 
 .page {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page > main {
+  flex: 1 0 auto;
 }
 
 .shell {
@@ -883,8 +889,10 @@ img {
 }
 
 .site-footer {
+  flex-shrink: 0;
   padding: 34px 0;
   border-top: 1px solid rgba(95, 65, 40, 0.12);
+  background: rgba(255, 250, 242, 0.34);
   color: var(--muted);
 }
 
