@@ -84,6 +84,39 @@ export const copy = {
         purposeTitle: "Para que sirve",
         purpose:
           "Checkpoint esta pensada como una libreta ultra rapida para cada juego. Te ayuda a recordar donde dejaste una partida, que querias hacer despues y que pistas o misiones no quieres perder.",
+        sections: {
+          storyTitle: "Nacio de una vida con muchas pestañas abiertas",
+          storyBody: [
+            "Soy padre de dos, tengo un trabajo full time, side projects de desarrollo y tambien proyectos de musica. Me encantan los videojuegos, pero muchas veces vuelvo a una partida despues de varios dias, semanas o meses sin tocarla.",
+            "Y a veces ni siquiera hace falta que pase tanto tiempo: un juego que jugue la semana pasada ya puede dejarme mirando la pantalla con esa pregunta incomoda de donde estaba, que tenia que hacer o cual era mi proximo objetivo.",
+          ],
+          problemTitle: "Cuando el juego no alcanza para recordar",
+          problemText:
+            "Los logs de quests ayudan... a veces. Otras veces son demasiado vagos, estan escondidos en menus eternos o directamente no explican el contexto que tu yo del pasado tenia clarisimo. Zelda: Oracle of Ages, te estoy mirando a vos.",
+          problemItems: [
+            {
+              title: "Proxima accion",
+              body: "Captura exactamente que quieres hacer la proxima vez que abras el juego, sin reconstruirlo de memoria.",
+            },
+            {
+              title: "Tareas relacionadas",
+              body: "Guarda pendientes concretos: hablar con alguien, conseguir un item, revisar una zona o terminar una cadena de misiones.",
+            },
+            {
+              title: "Guias y recursos",
+              body: "Deja a mano mapas, guias, videos o paginas utiles que encontraste en internet y que no quieres buscar otra vez.",
+            },
+          ],
+          resumeTitle: "Resume game, y listo",
+          resumeText:
+            "La idea de Checkpoint es simple: cuando finalmente aparece el tiempo para jugar, toco Resume game y tengo todo lo necesario para volver sin friccion. No necesito acordarme de mil detalles, porque ya los deje guardados en el telefono.",
+          resumeItems: [
+            "Objetivo actual claro antes de abrir el juego.",
+            "Notas rapidas con el contexto de la ultima sesion.",
+            "Tareas y recursos reunidos en un solo lugar.",
+          ],
+          guideCta: "Leer guia de uso",
+        },
       },
       newen: {
         name: "Newen",
@@ -148,27 +181,30 @@ export const copy = {
           "Una guía breve para dejar una partida lista para retomar aunque pasen días o semanas.",
         intro:
           "Una forma rápida de guardar el contexto de una partida cuando la vida no siempre te deja jugar seguido.",
+        image: "/checkpoint-post-hero.png",
+        imageAlt: "Ilustracion pixel art de una sala gamer con una persona retomando una partida desde el sofa",
+        cta: {
+          title: "Listo para guardar tu próximo checkpoint",
+          body: "Checkpoint Companion ya está disponible en App Store para iPhone.",
+          label: "Ver en App Store",
+          href: "https://apps.apple.com/nz/app/checkpoint-companion/id6766421117",
+        },
         galleryLabel: "Capturas de Checkpoint",
         gallery: [
           {
-            src: "/checkpoint-blog-library.png",
+            src: "/checkpoint-games-list.jpeg",
             alt: "Lista de juegos en Checkpoint con tareas activas y partidas recientes",
-            caption: "Tu biblioteca muestra qué juegos tienen contexto listo para retomar.",
+            caption: "La lista muestra tus juegos, cuales jugaste recientemente y que tareas siguen activas.",
           },
           {
-            src: "/checkpoint-blog-detail.png",
-            alt: "Detalle de una partida de Zelda Oracle of Ages con objetivo, notas y recurso guardado",
-            caption: "Cada juego guarda objetivo actual, última sesión, notas y recursos.",
+            src: "/checkpoint-detail-actions.png",
+            alt: "Detalle de Sekiro en Checkpoint con objetivo, ultima sesion, notas, tareas, recursos y menu para agregar contenido",
+            caption: "Cada juego puede tener objetivo actual, ultima sesion, notas, tareas y recursos utiles.",
           },
           {
-            src: "/checkpoint-blog-summary.png",
-            alt: "Resumen editable de Zelda Oracle of Ages dentro de Checkpoint",
-            caption: "Un resumen rápido ayuda a volver sin tener que reconstruir todo de memoria.",
-          },
-          {
-            src: "/checkpoint-blog-add-game.png",
-            alt: "Pantalla para agregar Bloodborne con sugerencias y selector de portada",
-            caption: "Agregar una partida nueva es simple: nombre, portada y contexto inicial.",
+            src: "/checkpoint-resume-game.jpeg",
+            alt: "Vista Resume Game de Sekiro con objetivo, tarea activa y recurso guardado",
+            caption: "Resume Game deja todo lo importante a mano para volver a jugar sin friccion.",
           },
         ],
         sections: [
@@ -192,6 +228,21 @@ export const copy = {
               "Notas: pistas, decisiones pendientes o cosas que no quieres olvidar.",
               "Recursos: una guía, mapa o referencia que ya encontraste y no quieres buscar de nuevo.",
             ],
+          },
+          {
+            title: "Qué agregar y cuándo",
+            body: [
+              "Checkpoint funciona mejor cuando cada cosa tiene un propósito claro. La idea no es convertir tus juegos en una planilla enorme, sino guardar el tipo justo de contexto para que tu próxima sesión empiece rápido.",
+              "Estas son las cuatro piezas principales que puedes agregar y cuándo conviene usar cada una.",
+            ],
+            bullets: [
+              "Juegos: agrega un juego cuando quieres poder retomarlo más adelante sin depender de la memoria. Es el contenedor principal para su objetivo actual, última sesión y todo lo relacionado.",
+              "Notes: usa una nota para contexto que no necesariamente requiere acción inmediata: una pista, una decisión pendiente, algo que probaste, una historia que quieres recordar o cualquier detalle que explique dónde estabas mentalmente.",
+              "Tasks: usa una task cuando hay una acción concreta por hacer. Por ejemplo: desbloquear un item, hablar con un personaje, volver a una zona, farmear un recurso o completar un paso específico.",
+              "Resources: agrega un resource cuando encontraste algo útil afuera del juego y sabes que lo vas a necesitar otra vez: una guía, un mapa, una wiki, un video, una build o una página con la ubicación de algo difícil de recordar.",
+            ],
+            after:
+              "Si algo responde a la pregunta “qué hago después”, probablemente es una task. Si responde “por qué estaba haciendo esto”, probablemente es una note. Si vive en internet y te ahorra buscar de nuevo, es un resource.",
           },
           {
             title: "Volver sin fricción",
@@ -416,6 +467,39 @@ export const copy = {
         purposeTitle: "What it is for",
         purpose:
           "Checkpoint is a fast notebook for each game. It helps you remember where you left off, what you wanted to do next, and which clues or quests you do not want to lose.",
+        sections: {
+          storyTitle: "Born from a life with too many tabs open",
+          storyBody: [
+            "I am a father of two, I have a full-time job, development side projects, and music projects too. I love videogames, but I often come back to a game after several days, weeks, or months away from it.",
+            "And sometimes it does not even take that long: I can play something last week and still come back wondering where I was, what I was doing, or what my next objective was supposed to be.",
+          ],
+          problemTitle: "When the game itself is not enough",
+          problemText:
+            "Quest logs help... sometimes. Other times they are too vague, buried inside endless menus, or missing the context that past-me understood perfectly. Zelda: Oracle of Ages, I am looking at you.",
+          problemItems: [
+            {
+              title: "Next action",
+              body: "Capture exactly what you want to do next time you open the game, without rebuilding it from memory.",
+            },
+            {
+              title: "Related tasks",
+              body: "Save concrete to-dos: talk to someone, find an item, revisit an area, or finish a quest chain.",
+            },
+            {
+              title: "Guides and resources",
+              body: "Keep maps, guides, videos, or useful pages you found online close by so you do not have to search again.",
+            },
+          ],
+          resumeTitle: "Resume game, and you are back",
+          resumeText:
+            "The idea behind Checkpoint is simple: when I finally find time to play, I tap Resume game and everything I need is right there. I do not need to remember a thousand little details, because I already saved them on my phone.",
+          resumeItems: [
+            "A clear current objective before opening the game.",
+            "Quick notes with context from the last session.",
+            "Tasks and resources gathered in one place.",
+          ],
+          guideCta: "Read usage guide",
+        },
       },
       newen: {
         name: "Newen",
@@ -480,27 +564,30 @@ export const copy = {
           "A short guide for leaving a game ready to resume even after days or weeks away.",
         intro:
           "A quick way to save the context of a playthrough when life does not always leave you with long gaming sessions.",
+        image: "/checkpoint-post-hero.png",
+        imageAlt: "Pixel art illustration of a gaming room with someone resuming a game from the couch",
+        cta: {
+          title: "Ready to save your next checkpoint",
+          body: "CheckPoint Companion is available now on the App Store for iPhone.",
+          label: "View on App Store",
+          href: "https://apps.apple.com/nz/app/checkpoint-companion/id6766421117",
+        },
         galleryLabel: "Checkpoint screenshots",
         gallery: [
           {
-            src: "/checkpoint-blog-library.png",
+            src: "/checkpoint-games-list.jpeg",
             alt: "Checkpoint game list with active tasks and recently played games",
-            caption: "Your library shows which games already have context ready to resume.",
+            caption: "The list shows your games, which ones you played recently, and which tasks are still active.",
           },
           {
-            src: "/checkpoint-blog-detail.png",
-            alt: "Zelda Oracle of Ages detail screen with objective, notes, and a saved resource",
-            caption: "Each game keeps the current objective, last session, notes, and resources together.",
+            src: "/checkpoint-detail-actions.png",
+            alt: "Sekiro detail screen in Checkpoint with objective, last session, notes, tasks, resources, and add menu",
+            caption: "Each game can keep the current objective, last session, notes, tasks, and useful resources.",
           },
           {
-            src: "/checkpoint-blog-summary.png",
-            alt: "Editable Zelda Oracle of Ages summary inside Checkpoint",
-            caption: "A quick summary helps you come back without rebuilding everything from memory.",
-          },
-          {
-            src: "/checkpoint-blog-add-game.png",
-            alt: "Add Game screen for Bloodborne with suggestions and cover picker",
-            caption: "Adding a new playthrough is simple: name, cover, and the first bit of context.",
+            src: "/checkpoint-resume-game.jpeg",
+            alt: "Sekiro Resume Game view with objective, active task, and saved resource",
+            caption: "Resume Game keeps everything important close by so you can get back into the game without friction.",
           },
         ],
         sections: [
@@ -524,6 +611,21 @@ export const copy = {
               "Notes: clues, pending decisions, or details you do not want to forget.",
               "Resources: a guide, map, or reference you already found and do not want to search for again.",
             ],
+          },
+          {
+            title: "What to add, and when",
+            body: [
+              "Checkpoint works best when each thing has a clear purpose. The point is not to turn your games into a huge spreadsheet, but to save the right kind of context so your next session starts quickly.",
+              "These are the four main pieces you can add, and when each one makes sense.",
+            ],
+            bullets: [
+              "Games: add a game when you want to be able to resume it later without relying on memory. It is the main container for its current objective, last session, and everything related to that playthrough.",
+              "Notes: use a note for context that does not necessarily require immediate action: a clue, a pending decision, something you tried, a story beat you want to remember, or any detail that explains where your head was.",
+              "Tasks: use a task when there is a concrete action to take. For example: unlock an item, talk to a character, return to an area, farm a resource, or finish a specific step.",
+              "Resources: add a resource when you found something useful outside the game and know you will need it again: a guide, map, wiki, video, build, or page with the location of something hard to remember.",
+            ],
+            after:
+              "If something answers “what do I do next?”, it is probably a task. If it answers “why was I doing this?”, it is probably a note. If it lives online and saves you from searching again, it is a resource.",
           },
           {
             title: "Coming back without friction",

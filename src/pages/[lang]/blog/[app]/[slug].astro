@@ -19,6 +19,10 @@ const lang = Astro.params.lang as Locale;
 const postKey = Astro.params.app as "checkpoint" | "newen";
 const t = copy[lang];
 const post = t.posts[postKey];
+const postGallery = "gallery" in post ? post.gallery : null;
+const postGalleryLabel = "galleryLabel" in post ? post.galleryLabel : "";
+const postCta = "cta" in post ? post.cta : null;
+const featureGalleryIndex = postKey === "checkpoint" ? 1 : -1;
 
 function asParagraphs(body: string | string[]) {
   return Array.isArray(body) ? body : [body];
@@ -33,36 +37,122 @@ function asParagraphs(body: string | string[]) {
         <h1>{post.title}</h1>
         <p>{post.intro}</p>
       </section>
-      <article class="content">
+      <article class="content post-content">
         {"image" in post && post.image && (
           <figure class="post-hero-image">
             <img src={post.image} alt={post.imageAlt} loading="eager" decoding="async" />
           </figure>
         )}
-        {"gallery" in post && post.gallery && (
-          <div class="post-gallery" aria-label={post.galleryLabel}>
-            {post.gallery.map((item) => (
-              <figure>
-                <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
-                <figcaption>{item.caption}</figcaption>
-              </figure>
-            ))}
-          </div>
-        )}
-        {post.sections.map((section) => (
-          <section class="post-section">
-            <h2>{section.title}</h2>
-            {asParagraphs(section.body).map((paragraph) => <p>{paragraph}</p>)}
-            {"bullets" in section && section.bullets && (
-              <ul>
-                {section.bullets.map((item) => <li>{item}</li>)}
-              </ul>
-            )}
-            {"after" in section && section.after && <p>{section.after}</p>}
-          </section>
+        {post.sections.map((section, sectionIndex) => (
+          sectionIndex === featureGalleryIndex && postGallery ? (
+            <section class="post-section post-feature-section">
+              <div class="post-section-copy">
+                <h2>{section.title}</h2>
+                {asParagraphs(section.body).map((paragraph) => <p>{paragraph}</p>)}
+                {"bullets" in section && section.bullets && (
+                  <ul>
+                    {section.bullets.map((item) => <li>{item}</li>)}
+                  </ul>
+                )}
+                {"after" in section && section.after && <p>{section.after}</p>}
+              </div>
+              <section class="post-carousel" aria-label={postGalleryLabel}>
+                <div class="post-carousel-track">
+                  {postGallery.map((item) => (
+                    <figure class="post-carousel-slide">
+                      <div class="post-carousel-phone">
+                        <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+                      </div>
+                      <figcaption>{item.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+                <button class="post-carousel-button previous" type="button" data-carousel-prev aria-label="Previous screenshot">
+                  ‹
+                </button>
+                <button class="post-carousel-button next" type="button" data-carousel-next aria-label="Next screenshot">
+                  ›
+                </button>
+              </section>
+            </section>
+          ) : (
+            <section class="post-section">
+              <h2>{section.title}</h2>
+              {asParagraphs(section.body).map((paragraph) => <p>{paragraph}</p>)}
+              {"bullets" in section && section.bullets && (
+                <ul>
+                  {section.bullets.map((item) => <li>{item}</li>)}
+                </ul>
+              )}
+              {"after" in section && section.after && <p>{section.after}</p>}
+            </section>
+          )
         ))}
+        {featureGalleryIndex < 0 && postGallery && (
+          <section class="post-carousel" aria-label={postGalleryLabel}>
+            <div class="post-carousel-track">
+              {postGallery.map((item) => (
+                <figure class="post-carousel-slide">
+                  <div class="post-carousel-phone">
+                    <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+                  </div>
+                  <figcaption>{item.caption}</figcaption>
+                </figure>
+              ))}
+            </div>
+            <button class="post-carousel-button previous" type="button" data-carousel-prev aria-label="Previous screenshot">
+              ‹
+            </button>
+            <button class="post-carousel-button next" type="button" data-carousel-next aria-label="Next screenshot">
+              ›
+            </button>
+          </section>
+            )}
+        {postCta && (
+          <section class="post-cta">
+            <div>
+              <h2>{postCta.title}</h2>
+              <p>{postCta.body}</p>
+            </div>
+            <a class="button" href={postCta.href} target="_blank" rel="noreferrer">
+              {postCta.label}
+            </a>
+          </section>
+        )}
       </article>
     </main>
     <Footer lang={lang} labels={t.nav} />
   </div>
 </BaseLayout>
+
+<script>
+  document.querySelectorAll(".post-carousel").forEach((carousel) => {
+    const track = carousel.querySelector(".post-carousel-track");
+    const previous = carousel.querySelector("[data-carousel-prev]");
+    const next = carousel.querySelector("[data-carousel-next]");
+
+    if (!(track instanceof HTMLElement) || !(previous instanceof HTMLButtonElement) || !(next instanceof HTMLButtonElement)) {
+      return;
+    }
+
+    const slides = Array.from(track.querySelectorAll(".post-carousel-slide"));
+
+    const scrollToSlide = (index: number) => {
+      track.scrollTo({ left: index * track.clientWidth, behavior: "smooth" });
+    };
+
+    const currentSlideIndex = () => Math.round(track.scrollLeft / track.clientWidth);
+
+    const rotateSlide = (direction: number) => {
+      if (slides.length === 0) {
+        return;
+      }
+
+      const nextIndex = (currentSlideIndex() + direction + slides.length) % slides.length;
+      scrollToSlide(nextIndex);
+    };
+
+    previous.addEventListener("click", () => rotateSlide(-1));
+    next.addEventListener("click", () => rotateSlide(1));
+  });
+</script>

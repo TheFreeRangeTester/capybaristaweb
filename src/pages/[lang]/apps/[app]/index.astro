@@ -15,8 +15,13 @@ const lang = Astro.params.lang as Locale;
 const app = Astro.params.app as AppKey;
 const t = copy[lang];
 const appCopy = t.apps[app];
+const checkpointSections = app === "checkpoint" ? t.apps.checkpoint.sections : null;
 const newenSections = app === "newen" ? t.apps.newen.sections : null;
-const appStoreHref = app === "newen" ? "https://apps.apple.com/nz/app/newen/id6765529178" : "";
+const appStoreHrefs: Record<AppKey, string> = {
+  checkpoint: "https://apps.apple.com/nz/app/checkpoint-companion/id6766421117",
+  newen: "https://apps.apple.com/nz/app/newen/id6765529178",
+};
+const appStoreHref = appStoreHrefs[app];
 const guideHref =
   app === "checkpoint"
     ? `/${lang}/blog/checkpoint/primer-checkpoint/`
@@ -42,7 +47,76 @@ const guideTitle = app === "checkpoint" ? t.posts.checkpoint.title : t.posts.new
         }
       </section>
       {
-        newenSections ? (
+        checkpointSections ? (
+          <article class="product-detail checkpoint-detail">
+            <section class="product-intro">
+              <div>
+                <img class="product-logo" src="/checkpoint-logo.png" alt="" aria-hidden="true" />
+                <h2>{appCopy.purposeTitle}</h2>
+              </div>
+              <p>{appCopy.purpose}</p>
+            </section>
+
+            <section class="product-section split">
+              <div>
+                <h2>{checkpointSections.storyTitle}</h2>
+              </div>
+              <div>
+                {checkpointSections.storyBody.map((paragraph) => <p>{paragraph}</p>)}
+              </div>
+            </section>
+
+            <section class="product-section split">
+              <div>
+                <h2>{checkpointSections.problemTitle}</h2>
+                <p>{checkpointSections.problemText}</p>
+              </div>
+              <div class="feature-stack">
+                {checkpointSections.problemItems.map((item) => (
+                  <article class="feature-line">
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section class="product-section checkpoint-resume">
+              <figure class="checkpoint-resume-visual">
+                <img
+                  src="/checkpoint-showcase.png"
+                  alt={`${appCopy.name} ${t.appDirectory.screenshotAlt}`}
+                  loading="lazy"
+                  width="1200"
+                  height="900"
+                />
+              </figure>
+              <div>
+                <h2>{checkpointSections.resumeTitle}</h2>
+                <p>{checkpointSections.resumeText}</p>
+                <ul class="check-list">
+                  {checkpointSections.resumeItems.map((item) => <li>{item}</li>)}
+                </ul>
+              </div>
+            </section>
+
+            <section class="guide-band">
+              <div>
+                <h2>{t.apps.guidesTitle}</h2>
+                <p>{guideTitle}</p>
+              </div>
+              <a class="button" href={guideHref}>{checkpointSections.guideCta}</a>
+            </section>
+
+            <section class="product-section compact-privacy">
+              <h2>{t.apps.privacyTitle}</h2>
+              <p>
+                {t.apps.privacyText}
+                <a href={`/${lang}/privacy-policy/`}>{t.nav.privacyPolicy}</a>.
+              </p>
+            </section>
+          </article>
+        ) : newenSections ? (
           <article class="product-detail newen-detail">
             <section class="product-intro">
               <div>
