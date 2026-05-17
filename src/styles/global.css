@@ -1190,6 +1190,47 @@ img {
   align-items: start;
 }
 
+.newen-intro {
+  grid-template-columns: minmax(0, 0.68fr) minmax(320px, 1fr);
+  align-items: center;
+  border-top: 0;
+  border-radius: 8px;
+  padding: clamp(24px, 4.5vw, 48px);
+  background:
+    linear-gradient(135deg, rgba(255, 250, 242, 0.9), rgba(215, 238, 229, 0.62)),
+    var(--surface);
+  box-shadow: 0 22px 70px rgba(74, 52, 32, 0.08);
+}
+
+.newen-intro-visual {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  margin: 0;
+  border: 1px solid rgba(47, 116, 99, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 250, 242, 0.74);
+  box-shadow: 0 24px 80px rgba(74, 52, 32, 0.14);
+  overflow: hidden;
+}
+
+.newen-intro-visual::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(180deg, rgba(255, 250, 242, 0.08), transparent 44%),
+    radial-gradient(circle at 18% 18%, rgba(255, 248, 234, 0.22), transparent 34%);
+}
+
+.newen-intro-visual img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  object-fit: cover;
+}
+
 .product-logo {
   width: 72px;
   height: 72px;
@@ -1274,6 +1315,10 @@ img {
     linear-gradient(135deg, rgba(215, 238, 229, 0.58), rgba(255, 250, 242, 0.9)),
     var(--surface);
   box-shadow: 0 22px 70px rgba(74, 52, 32, 0.08);
+}
+
+.privacy-feature-text {
+  grid-template-columns: minmax(0, 760px);
 }
 
 .privacy-visual {
@@ -1470,6 +1515,7 @@ img {
   }
 
   .product-intro,
+  .newen-intro,
   .product-section.split,
   .checkpoint-resume,
   .privacy-feature,
@@ -1479,6 +1525,7 @@ img {
   }
 
   .privacy-visual,
+  .newen-intro-visual,
   .guide-band .button {
     justify-self: start;
   }

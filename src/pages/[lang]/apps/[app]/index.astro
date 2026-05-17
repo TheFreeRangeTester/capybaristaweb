@@ -118,12 +118,20 @@ const guideTitle = app === "checkpoint" ? t.posts.checkpoint.title : t.posts.new
           </article>
         ) : newenSections ? (
           <article class="product-detail newen-detail">
-            <section class="product-intro">
+            <section class="product-intro newen-intro">
               <div>
-                <img class="product-logo" src="/newen-logo.png" alt="" aria-hidden="true" />
                 <h2>{appCopy.purposeTitle}</h2>
+                <p>{appCopy.purpose}</p>
               </div>
-              <p>{appCopy.purpose}</p>
+              <figure class="newen-intro-visual">
+                <img
+                  src="/newen-showcase.png"
+                  alt={`${appCopy.name} ${t.appDirectory.screenshotAlt}`}
+                  loading="eager"
+                  width="1536"
+                  height="1024"
+                />
+              </figure>
             </section>
 
             <section class="product-section split">
@@ -141,7 +149,7 @@ const guideTitle = app === "checkpoint" ? t.posts.checkpoint.title : t.posts.new
               </div>
             </section>
 
-            <section class="product-section privacy-feature">
+            <section class:list={["product-section", "privacy-feature", lang !== "es" && "privacy-feature-text"]}>
               <div class="privacy-copy">
                 <h2>{newenSections.privacyTitle}</h2>
                 <p>{newenSections.privacyText}</p>
@@ -149,15 +157,19 @@ const guideTitle = app === "checkpoint" ? t.posts.checkpoint.title : t.posts.new
                   {newenSections.privacyPoints.map((point) => <li>{point}</li>)}
                 </ul>
               </div>
-              <figure class="privacy-visual">
-                <img
-                  src={newenSections.privacyImage}
-                  alt={newenSections.privacyImageAlt}
-                  loading="lazy"
-                  width="872"
-                  height="1804"
-                />
-              </figure>
+              {
+                lang === "es" && (
+                  <figure class="privacy-visual">
+                    <img
+                      src={newenSections.privacyImage}
+                      alt={newenSections.privacyImageAlt}
+                      loading="lazy"
+                      width="872"
+                      height="1804"
+                    />
+                  </figure>
+                )
+              }
             </section>
 
             <section class="product-section watch-section">
