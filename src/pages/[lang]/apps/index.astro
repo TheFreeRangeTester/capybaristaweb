@@ -17,6 +17,7 @@ const apps = [
     image: "/checkpoint-showcase.png",
     tone: "default",
     storeHref: "https://apps.apple.com/nz/app/checkpoint-companion/id6766421117",
+    productHuntBadge: null,
   },
   {
     key: "newen",
@@ -24,6 +25,12 @@ const apps = [
     image: "/newen-showcase.png",
     tone: "newen",
     storeHref: "https://apps.apple.com/nz/app/newen/id6765529178",
+    productHuntBadge: {
+      href: "https://www.producthunt.com/products/newen-mood-intelligence?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-newen-mood-intelligence",
+      image:
+        "https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1147207&theme=light&t=1779163755841",
+      alt: "Newen Mood Intelligence - Discover patterns in feelings | Product Hunt",
+    },
   },
 ] as const;
 ---
@@ -64,6 +71,24 @@ const apps = [
                     <a class="button secondary" href={`/${lang}/apps/${item.key}/`}>
                       {t.appDirectory.learnMore}
                     </a>
+                    {
+                      item.productHuntBadge ? (
+                        <a
+                          class="product-hunt-badge"
+                          href={item.productHuntBadge.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <img
+                            src={item.productHuntBadge.image}
+                            alt={item.productHuntBadge.alt}
+                            width="250"
+                            height="54"
+                            loading="lazy"
+                          />
+                        </a>
+                      ) : null
+                    }
                   </div>
                 </div>
               </article>

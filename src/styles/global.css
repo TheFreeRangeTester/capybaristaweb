@@ -808,9 +808,23 @@ img {
 .app-card-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 10px;
   justify-content: flex-end;
   margin-top: 0;
+}
+
+.product-hunt-badge {
+  display: inline-flex;
+  width: 250px;
+  height: 54px;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-hunt-badge img {
+  width: 250px;
+  height: 54px;
 }
 
 .app-panel h3,
