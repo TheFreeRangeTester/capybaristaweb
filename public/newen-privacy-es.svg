@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 872 1804" role="img" aria-labelledby="title desc">
+  <title id="title">Privacidad de Newen</title>
+  <desc id="desc">Resumen visual en español sobre datos locales, Face ID, iCloud y uso offline en Newen.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#fff8ef"/>
+      <stop offset="0.52" stop-color="#f8efe4"/>
+      <stop offset="1" stop-color="#f6fbf3"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0f6a43"/>
+      <stop offset="1" stop-color="#2aa7a0"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#6b5a44" flood-opacity="0.16"/>
+    </filter>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; fill: #1f2a27; }
+      .serif { font-family: Georgia, "Times New Roman", serif; fill: #0b4f35; font-weight: 700; }
+      .muted { fill: #5f6662; }
+      .label { font-size: 26px; font-weight: 700; }
+      .body { font-size: 21px; fill: #4f5753; }
+      .small { font-size: 19px; fill: #4f5753; }
+      .icon-bg { fill: #e6f0dd; }
+      .warm { fill: #f6e6d2; }
+      .blue { fill: #e2eef0; }
+      .line { stroke: #9bae8c; stroke-width: 3; fill: none; stroke-linecap: round; }
+    </style>
+  </defs>
+
+  <rect width="872" height="1804" rx="12" fill="url(#bg)"/>
+  <text class="serif" x="436" y="134" text-anchor="middle" font-size="72">
+    <tspan x="436">Privada, local</tspan>
+    <tspan x="436" dy="84">y protegida</tspan>
+  </text>
+  <text class="muted" x="436" y="284" text-anchor="middle" font-size="32">
+    <tspan x="436">Tus datos se quedan con vos.</tspan>
+    <tspan x="436" dy="40">Sin cuentas. Sin tracking.</tspan>
+  </text>
+
+  <path class="line" d="M295 480 C205 510 151 579 135 665"/>
+  <path class="line" d="M578 480 C668 510 721 579 737 665"/>
+  <path class="line" d="M756 933 C738 1036 669 1104 571 1131"/>
+  <path class="line" d="M522 1159 C421 1187 337 1175 260 1120"/>
+  <path class="line" d="M126 1010 C110 908 132 821 196 752"/>
+
+  <circle cx="436" cy="464" r="72" class="icon-bg"/>
+  <text x="436" y="492" text-anchor="middle" font-size="58" fill="#0b5b3c">⌘</text>
+  <text class="label" x="436" y="570" text-anchor="middle">Bloqueo con Face ID</text>
+  <text class="body" x="436" y="610" text-anchor="middle">
+    <tspan x="436">Sumá una capa extra</tspan>
+    <tspan x="436" dy="30">de privacidad.</tspan>
+  </text>
+
+  <circle cx="132" cy="696" r="66" class="icon-bg"/>
+  <rect x="111" y="655" width="42" height="82" rx="9" fill="none" stroke="#467a4c" stroke-width="7"/>
+  <text class="label" x="132" y="804" text-anchor="middle">Todo en tu dispositivo</text>
+  <text class="body" x="132" y="842" text-anchor="middle">
+    <tspan x="132">Guardado localmente.</tspan>
+    <tspan x="132" dy="30">Vos tenés el control.</tspan>
+  </text>
+
+  <circle cx="724" cy="696" r="66" class="blue"/>
+  <path d="M690 708c-20 0-34-13-34-31 0-16 11-29 27-32 7-23 28-39 53-39 31 0 56 24 58 54 17 5 29 20 29 38 0 22-18 40-41 40h-92z" fill="none" stroke="#2788d8" stroke-width="6"/>
+  <text class="label" x="724" y="804" text-anchor="middle">Sincronización con iCloud</text>
+  <text class="body" x="724" y="842" text-anchor="middle">
+    <tspan x="724">Opcional y segura</tspan>
+    <tspan x="724" dy="30">entre tus dispositivos.</tspan>
+  </text>
+
+  <g filter="url(#shadow)">
+    <rect x="316" y="716" width="240" height="210" rx="44" fill="#fff2df"/>
+    <circle cx="430" cy="767" r="12" fill="#ff986c"/>
+    <path d="M382 848c11-57 48-64 57-9 10-55 48-49 55 10-23 19-42 31-55 35-20-7-39-19-57-36z" fill="none" stroke="url(#mark)" stroke-width="17" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M438 873c-4-39 6-72 31-98" fill="none" stroke="#6c8d72" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <text class="serif" x="436" y="990" text-anchor="middle" font-size="52">Newen</text>
+  <text class="muted" x="436" y="1034" text-anchor="middle" font-size="28">
+    <tspan x="436">Tu espacio.</tspan>
+    <tspan x="436" dy="34">Tus datos.</tspan>
+  </text>
+
+  <circle cx="222" cy="1078" r="66" class="warm"/>
+  <text x="222" y="1102" text-anchor="middle" font-size="58" fill="#b58b64">⊘</text>
+  <text class="label" x="222" y="1190" text-anchor="middle">Sin cuentas</text>
+  <text class="body" x="222" y="1230" text-anchor="middle">
+    <tspan x="222">Sin registros, emails</tspan>
+    <tspan x="222" dy="30">ni perfiles externos.</tspan>
+  </text>
+
+  <circle cx="642" cy="1078" r="66" class="icon-bg"/>
+  <path d="M606 1045l35-16 39 16v35c0 39-26 62-39 69-13-7-39-30-39-69z" fill="none" stroke="#467a4c" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M623 1082l14 15 28-35" fill="none" stroke="#467a4c" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text class="label" x="642" y="1190" text-anchor="middle">100% offline</text>
+  <text class="body" x="642" y="1230" text-anchor="middle">
+    <tspan x="642">No necesitás internet.</tspan>
+    <tspan x="642" dy="30">Tus datos no salen.</tspan>
+  </text>
+
+  <rect x="38" y="1362" width="796" height="250" rx="36" fill="#f7f8ef" stroke="#e1e4d6" stroke-width="2"/>
+  <line x1="300" y1="1392" x2="300" y2="1588" stroke="#e1e4d6" stroke-width="2"/>
+  <line x1="566" y1="1392" x2="566" y2="1588" stroke="#e1e4d6" stroke-width="2"/>
+
+  <circle cx="170" cy="1438" r="52" class="icon-bg"/>
+  <text x="170" y="1462" text-anchor="middle" font-size="50" fill="#4f7f50">🔒</text>
+  <text class="label" x="170" y="1530" text-anchor="middle">Privada por diseño</text>
+  <text class="small" x="170" y="1566" text-anchor="middle">
+    <tspan x="170">Sin anuncios.</tspan>
+    <tspan x="170" dy="27">Sin recopilación.</tspan>
+  </text>
+
+  <circle cx="432" cy="1438" r="52" class="icon-bg"/>
+  <text x="432" y="1460" text-anchor="middle" font-size="50" fill="#4f7f50">◒</text>
+  <text class="label" x="432" y="1530" text-anchor="middle">Hecha para entender</text>
+  <text class="small" x="432" y="1566" text-anchor="middle">
+    <tspan x="432">Un espacio calmo</tspan>
+    <tspan x="432" dy="27">para mirarte mejor.</tspan>
+  </text>
+
+  <circle cx="698" cy="1438" r="52" class="warm"/>
+  <text x="698" y="1460" text-anchor="middle" font-size="50" fill="#e57947">♥</text>
+  <text class="label" x="698" y="1530" text-anchor="middle">Hecha para vos</text>
+  <text class="small" x="698" y="1566" text-anchor="middle">
+    <tspan x="698">Tus momentos,</tspan>
+    <tspan x="698" dy="27">siempre tuyos.</tspan>
+  </text>
+
+  <rect x="112" y="1642" width="648" height="94" rx="28" fill="#e4eadc"/>
+  <text x="174" y="1702" font-size="42" fill="#4f7f50">🔒</text>
+  <text class="label" x="240" y="1688">Tu privacidad es la base.</text>
+  <text class="body" x="240" y="1724">Tranquilidad para enfocarte en lo importante.</text>
+</svg>

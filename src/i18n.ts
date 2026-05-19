@@ -25,23 +25,23 @@ export const copy = {
     meta: {
       homeTitle: "Capybarista · Apps for iOS",
       homeDescription:
-        "Capybarista es un estudio independiente de apps iOS creado por un ingeniero argentino en Nueva Zelanda, con foco en calidad de software, privacidad y productos utiles.",
+        "Capybarista es un estudio independiente de apps iOS creado por un ingeniero argentino en Nueva Zelanda, con foco en calidad de software, privacidad y productos útiles.",
     },
     nav: {
       apps: "Apps",
       blog: "Blog",
-      privacy: "Privacy",
+      privacy: "Privacidad",
       privacyPolicy: "Política de privacidad",
     },
     home: {
       heroTitle: "Hola 👋🏻",
       intro:
-        "Somos Capybarista, un estudio indie para apps iOS con aroma a cafe, foco tranquilo y pequeñas herramientas premium. Creamos experiencias simples para volver a tu estado mental, tus juegos y tus rutinas sin friccion.",
-      explore: "Explore apps",
+        "Somos Capybarista, un estudio indie para apps iOS con aroma a café, foco tranquilo y pequeñas herramientas premium. Creamos experiencias simples para volver a tu estado mental, tus juegos y tus rutinas sin fricción.",
+      explore: "Explorar apps",
       readBlog: "Leer el blog",
       appsTitle: "Apps iOS para volver a tu ritmo.",
       appsText:
-        "Cada producto tiene una pagina propia, su blog y acceso directo a la politica de privacidad compartida del estudio.",
+        "Cada producto tiene una página propia, su blog y acceso directo a la política de privacidad compartida del estudio.",
       aboutTitle: "Un estudio indie, una persona detrás.",
       aboutText:
         "Capybarista es el proyecto de un desarrollador argentino viviendo en Nueva Zelanda, con más de 16 años dedicado a la ingeniería de calidad en software. Después de años ayudando a crear productos confiables, decidí construir aplicaciones iOS propias con la calidad, la privacidad y la experiencia diaria como foco principal.",
@@ -49,20 +49,20 @@ export const copy = {
         "Creo productos que quiero que existan para usarlos yo también: herramientas simples, cuidadas y honestas para personas con gustos y necesidades parecidas.",
       aboutPhotoAlt: "Fundador de Capybarista en Nueva Zelanda",
       socialLabel: "También estoy en",
-      blogTitle: "Guias cortas, utiles y sin vueltas.",
+      blogTitle: "Guías cortas, útiles y sin vueltas.",
       blogText:
-        "El blog esta pensado para explicar como usar cada app, compartir tips y dejar documentado lo esencial.",
-      privacyTitle: "Privacy Policy lista para hostear.",
+        "El blog está pensado para explicar cómo usar cada app, compartir tips y dejar documentado lo esencial.",
+      privacyTitle: "Política de privacidad lista para hostear.",
       privacyText:
-        "Una ruta estatica para centralizar la privacidad de Capybarista y enlazarla desde App Store Connect, las apps y cada pagina de producto.",
-      openPrivacy: "Abrir privacy",
+        "Una ruta estática para centralizar la privacidad de Capybarista y enlazarla desde App Store Connect, las apps y cada página de producto.",
+      openPrivacy: "Abrir privacidad",
       viewApp: "Ver app",
-      readGuide: "Leer guia",
+      readGuide: "Leer guía",
     },
     appDirectory: {
       title: "Apps",
       intro:
-        "Apps iOS simples, privadas y cuidadas. Las construyo para usarlas yo tambien, y espero que tambien le sirvan a personas con gustos y necesidades parecidas.",
+        "Apps iOS simples, privadas y cuidadas. Las construyo para usarlas yo también, y espero que también le sirvan a personas con gustos y necesidades parecidas.",
       appStoreSoon: "App Store pronto",
       screenshotAlt: "Vista previa de la app",
       learnMore: "Detalles",
@@ -70,109 +70,109 @@ export const copy = {
     blogIndex: {
       title: "Blog",
       intro:
-        "Guias cortas para usar mejor cada app, descubrir pequenos tips y dejar documentado lo esencial.",
+        "Guías cortas para usar mejor cada app, descubrir pequeños tips y dejar documentado lo esencial.",
     },
     apps: {
       checkpoint: {
         name: "Checkpoint",
         description:
-          "Un companion sin friccion para gamers que quieren retomar partidas sin olvidar donde estaban, que hacian o cual era el siguiente objetivo.",
+          "Un companion sin fricción para gamers que quieren retomar partidas sin olvidar dónde estaban, qué hacían o cuál era el siguiente objetivo.",
         tags: ["Gaming", "Backlog", "iOS"],
         detailTitle: "Checkpoint",
         detailIntro:
-          "Retoma tus juegos sin perder contexto: ultimo objetivo, proximo paso, notas rapidas y ese detalle que siempre se olvida entre sesiones.",
-        purposeTitle: "Para que sirve",
+          "Retomá tus juegos sin perder contexto: último objetivo, próximo paso, notas rápidas y ese detalle que siempre se olvida entre sesiones.",
+        purposeTitle: "Para qué sirve",
         purpose:
-          "Checkpoint esta pensada como una libreta ultra rapida para cada juego. Te ayuda a recordar donde dejaste una partida, que querias hacer despues y que pistas o misiones no quieres perder.",
+          "Checkpoint está pensada como una libreta ultra rápida para cada juego. Te ayuda a recordar dónde dejaste una partida, qué querías hacer después y qué pistas o misiones no querés perder.",
         sections: {
-          storyTitle: "Nacio de una vida con muchas pestañas abiertas",
+          storyTitle: "Nació de una vida con muchas pestañas abiertas",
           storyBody: [
-            "Soy padre de dos, tengo un trabajo full time, side projects de desarrollo y tambien proyectos de musica. Me encantan los videojuegos, pero muchas veces vuelvo a una partida despues de varios dias, semanas o meses sin tocarla.",
-            "Y a veces ni siquiera hace falta que pase tanto tiempo: un juego que jugue la semana pasada ya puede dejarme mirando la pantalla con esa pregunta incomoda de donde estaba, que tenia que hacer o cual era mi proximo objetivo.",
+            "Soy padre de dos, tengo un trabajo full time, side projects de desarrollo y también proyectos de música. Me encantan los videojuegos, pero muchas veces vuelvo a una partida después de varios días, semanas o meses sin tocarla.",
+            "Y a veces ni siquiera hace falta que pase tanto tiempo: un juego que jugué la semana pasada ya puede dejarme mirando la pantalla con esa pregunta incómoda de dónde estaba, qué tenía que hacer o cuál era mi próximo objetivo.",
           ],
           problemTitle: "Cuando el juego no alcanza para recordar",
           problemText:
-            "Los logs de quests ayudan... a veces. Otras veces son demasiado vagos, estan escondidos en menus eternos o directamente no explican el contexto que tu yo del pasado tenia clarisimo. Zelda: Oracle of Ages, te estoy mirando a vos.",
+            "Los logs de quests ayudan... a veces. Otras veces son demasiado vagos, están escondidos en menús eternos o directamente no explican el contexto que tu yo del pasado tenía clarísimo. Zelda: Oracle of Ages, te estoy mirando a vos.",
           problemItems: [
             {
-              title: "Proxima accion",
-              body: "Captura exactamente que quieres hacer la proxima vez que abras el juego, sin reconstruirlo de memoria.",
+              title: "Próxima acción",
+              body: "Capturá exactamente qué querés hacer la próxima vez que abras el juego, sin reconstruirlo de memoria.",
             },
             {
               title: "Tareas relacionadas",
-              body: "Guarda pendientes concretos: hablar con alguien, conseguir un item, revisar una zona o terminar una cadena de misiones.",
+              body: "Guardá pendientes concretos: hablar con alguien, conseguir un ítem, revisar una zona o terminar una cadena de misiones.",
             },
             {
-              title: "Guias y recursos",
-              body: "Deja a mano mapas, guias, videos o paginas utiles que encontraste en internet y que no quieres buscar otra vez.",
+              title: "Guías y recursos",
+              body: "Dejá a mano mapas, guías, videos o páginas útiles que encontraste en internet y que no querés buscar otra vez.",
             },
           ],
           resumeTitle: "Resume game, y listo",
           resumeText:
-            "La idea de Checkpoint es simple: cuando finalmente aparece el tiempo para jugar, toco Resume game y tengo todo lo necesario para volver sin friccion. No necesito acordarme de mil detalles, porque ya los deje guardados en el telefono.",
+            "La idea de Checkpoint es simple: cuando finalmente aparece el tiempo para jugar, toco Resume game y tengo todo lo necesario para volver sin fricción. No necesito acordarme de mil detalles, porque ya los dejé guardados en el teléfono.",
           resumeItems: [
             "Objetivo actual claro antes de abrir el juego.",
-            "Notas rapidas con el contexto de la ultima sesion.",
+            "Notas rápidas con el contexto de la última sesión.",
             "Tareas y recursos reunidos en un solo lugar.",
           ],
-          guideCta: "Leer guia de uso",
+          guideCta: "Leer guía de uso",
         },
       },
       newen: {
         name: "Newen",
         description:
-          "Un mood tracker reflexivo para reconocer energia, emociones y patrones personales con calma, sin convertir el dia en una encuesta.",
-        tags: ["Mood tracking", "Reflexion", "iOS"],
+          "Un mood tracker reflexivo para reconocer energía, emociones y patrones personales con calma, sin convertir el día en una encuesta.",
+        tags: ["Mood tracking", "Reflexión", "iOS"],
         detailTitle: "Newen",
         detailIntro:
-          "Una app para observar tu estado de animo, energia y pequeñas senales internas con una experiencia suave y privada.",
-        purposeTitle: "Para que sirve",
+          "Una app para observar tu estado de ánimo, energía y pequeñas señales internas con una experiencia suave y privada.",
+        purposeTitle: "Para qué sirve",
         purpose:
-          "Newen ayuda a registrar como te sientes y descubrir patrones sin presion. La idea es que puedas pausar, nombrar lo que pasa y seguir con mas claridad.",
+          "Newen ayuda a registrar cómo te sentís y descubrir patrones sin presión. La idea es que puedas pausar, nombrar lo que pasa y seguir con más claridad.",
         sections: {
           rhythmTitle: "Registrar sin convertirlo en tarea",
           rhythmText:
-            "Newen esta pensada para capturar un momento emocional en segundos: eliges como te sientes, sumas contexto si hace falta y sigues con tu dia. No necesitas escribir un diario largo ni completar formularios eternos.",
+            "Newen está pensada para capturar un momento emocional en segundos: elegís cómo te sentís, sumás contexto si hace falta y seguís con tu día. No necesitás escribir un diario largo ni completar formularios eternos.",
           rhythmItems: [
             {
               title: "Estados claros",
-              body: "Elige entre emociones simples y reconocibles para que el registro sea rapido incluso cuando no tienes energia para explicar demasiado.",
+              body: "Elegí entre emociones simples y reconocibles para que el registro sea rápido incluso cuando no tenés energía para explicar demasiado.",
             },
             {
               title: "Contexto opcional",
-              body: "Agrega una nota corta cuando algo importe: una reunion, una conversacion, un descanso, una buena noticia o un dia pesado.",
+              body: "Agregá una nota corta cuando algo importe: una reunión, una conversación, un descanso, una buena noticia o un día pesado.",
             },
             {
               title: "Patrones visibles",
-              body: "Con el tiempo, Newen te ayuda a mirar tendencias, dias recurrentes y cambios de energia sin juzgar lo que aparece.",
+              body: "Con el tiempo, Newen te ayuda a mirar tendencias, días recurrentes y cambios de energía sin juzgar lo que aparece.",
             },
           ],
           privacyTitle: "Privada, local y protegida",
           privacyText:
-            "Tus registros son tuyos. Newen no necesita cuentas, no usa tracking y no convierte tus emociones en datos para publicidad. La experiencia esta disenada para que puedas observarte con calma y confianza.",
-          privacyImage: "/newen-privacy-es.png",
+            "Tus registros son tuyos. Newen no necesita cuentas, no usa tracking y no convierte tus emociones en datos para publicidad. La experiencia está diseñada para que puedas observarte con calma y confianza.",
+          privacyImage: "/newen-privacy-es.svg",
           privacyImageAlt: "Resumen visual de privacidad de Newen: datos locales, sin cuentas, Face ID, iCloud y uso offline",
           privacyPoints: [
             "Sin cuentas, emails ni perfiles externos.",
             "Datos guardados localmente en tu dispositivo.",
-            "Sin anuncios, sin tracking y sin recopilacion de datos.",
+            "Sin anuncios, sin tracking y sin recopilación de datos.",
             "Bloqueo con Face ID para sumar una capa de privacidad.",
-            "Sincronizacion opcional entre dispositivos mediante iCloud.",
+            "Sincronización opcional entre dispositivos mediante iCloud.",
           ],
-          watchTitle: "Tambien en Apple Watch",
+          watchTitle: "También en Apple Watch",
           watchText:
-            "Cuando tienes Apple Watch, Newen se vuelve todavia mas ligera: puedes registrar un estado desde la muneca y hacer micro sesiones de reflexion sin sacar el telefono.",
+            "Cuando tenés Apple Watch, Newen se vuelve todavía más ligera: podés registrar un estado desde la muñeca y hacer microsesiones de reflexión sin sacar el teléfono.",
           watchItems: [
-            "Registros rapidos cuando algo acaba de pasar.",
+            "Registros rápidos cuando algo acaba de pasar.",
             "Reflexiones breves de 30 segundos a 2 minutos.",
-            "Una forma menos invasiva de mantener consistencia durante el dia.",
+            "Una forma menos invasiva de mantener consistencia durante el día.",
           ],
-          guideCta: "Leer guia de uso",
+          guideCta: "Leer guía de uso",
         },
       },
-      guidesTitle: "Guias",
+      guidesTitle: "Guías",
       privacyTitle: "Privacidad",
-      privacyText: "La informacion de privacidad de Capybarista vive en la",
+      privacyText: "La información de privacidad de Capybarista vive en la",
     },
     posts: {
       checkpoint: {
@@ -194,17 +194,17 @@ export const copy = {
           {
             src: "/checkpoint-games-list.jpeg",
             alt: "Lista de juegos en Checkpoint con tareas activas y partidas recientes",
-            caption: "La lista muestra tus juegos, cuales jugaste recientemente y que tareas siguen activas.",
+            caption: "La lista muestra tus juegos, cuáles jugaste recientemente y qué tareas siguen activas.",
           },
           {
             src: "/checkpoint-detail-actions.png",
-            alt: "Detalle de Sekiro en Checkpoint con objetivo, ultima sesion, notas, tareas, recursos y menu para agregar contenido",
-            caption: "Cada juego puede tener objetivo actual, ultima sesion, notas, tareas y recursos utiles.",
+            alt: "Detalle de Sekiro en Checkpoint con objetivo, última sesión, notas, tareas, recursos y menú para agregar contenido",
+            caption: "Cada juego puede tener objetivo actual, última sesión, notas, tareas y recursos útiles.",
           },
           {
             src: "/checkpoint-resume-game.jpeg",
             alt: "Vista Resume Game de Sekiro con objetivo, tarea activa y recurso guardado",
-            caption: "Resume Game deja todo lo importante a mano para volver a jugar sin friccion.",
+            caption: "Resume Game deja todo lo importante a mano para volver a jugar sin fricción.",
           },
         ],
         sections: [
@@ -236,13 +236,13 @@ export const copy = {
               "Estas son las cuatro piezas principales que puedes agregar y cuándo conviene usar cada una.",
             ],
             bullets: [
-              "Juegos: agrega un juego cuando quieres poder retomarlo más adelante sin depender de la memoria. Es el contenedor principal para su objetivo actual, última sesión y todo lo relacionado.",
-              "Notes: usa una nota para contexto que no necesariamente requiere acción inmediata: una pista, una decisión pendiente, algo que probaste, una historia que quieres recordar o cualquier detalle que explique dónde estabas mentalmente.",
-              "Tasks: usa una task cuando hay una acción concreta por hacer. Por ejemplo: desbloquear un item, hablar con un personaje, volver a una zona, farmear un recurso o completar un paso específico.",
-              "Resources: agrega un resource cuando encontraste algo útil afuera del juego y sabes que lo vas a necesitar otra vez: una guía, un mapa, una wiki, un video, una build o una página con la ubicación de algo difícil de recordar.",
+              "Juegos: agregá un juego cuando querés poder retomarlo más adelante sin depender de la memoria. Es el contenedor principal para su objetivo actual, última sesión y todo lo relacionado.",
+              "Notas: usá una nota para contexto que no necesariamente requiere acción inmediata: una pista, una decisión pendiente, algo que probaste, una historia que querés recordar o cualquier detalle que explique dónde estabas mentalmente.",
+              "Tareas: usá una tarea cuando hay una acción concreta por hacer. Por ejemplo: desbloquear un ítem, hablar con un personaje, volver a una zona, farmear un recurso o completar un paso específico.",
+              "Recursos: agregá un recurso cuando encontraste algo útil afuera del juego y sabés que lo vas a necesitar otra vez: una guía, un mapa, una wiki, un video, una build o una página con la ubicación de algo difícil de recordar.",
             ],
             after:
-              "Si algo responde a la pregunta “qué hago después”, probablemente es una task. Si responde “por qué estaba haciendo esto”, probablemente es una note. Si vive en internet y te ahorra buscar de nuevo, es un resource.",
+              "Si algo responde a la pregunta “qué hago después”, probablemente es una tarea. Si responde “por qué estaba haciendo esto”, probablemente es una nota. Si vive en internet y te ahorra buscar de nuevo, es un recurso.",
           },
           {
             title: "Volver sin fricción",
@@ -271,7 +271,7 @@ export const copy = {
           "Recomendaciones para obtener insights reales sin convertir el registro emocional en otra obligación.",
         intro:
           "Newen está diseñada para ser simple. Sin fricción. Sin ruido. Pero el verdadero valor aparece en cómo la usás con el tiempo.",
-        image: "/newen-guide-es.png",
+        image: "/newen-guide-es.svg",
         imageAlt: "Guía visual en español para sacarle el máximo provecho a Newen",
         sections: [
           {
@@ -289,7 +289,7 @@ export const copy = {
               "Pero si querés estructura, podés configurar hasta 3 por día.",
               "Una configuración simple que recomiendo:",
             ],
-            bullets: ["uno a la mañana", "uno a mitad del día", "uno a la noche"],
+            bullets: ["Uno a la mañana.", "Uno a mitad del día.", "Uno a la noche."],
             after:
               "Esto te da una visión más completa del día, no solo de cómo terminó. Porque tendemos a recordar la última emoción, no todo el recorrido.",
           },
@@ -301,9 +301,9 @@ export const copy = {
               "De hecho, es útil hacerlo cuando pasa algo relevante:",
             ],
             bullets: [
-              "una reunión estresante",
-              "una buena charla",
-              "un momento que te quedó marcado",
+              "Una reunión estresante.",
+              "Una buena charla.",
+              "Un momento que te quedó marcado.",
             ],
             after:
               "Eso le da contexto a tus datos. Y con el tiempo, ese contexto se transforma en patrones.",
@@ -338,7 +338,7 @@ export const copy = {
               "Podés registrar estados en segundos, sin fricción.",
               "Y también podés hacer sesiones de reflexión:",
             ],
-            bullets: ["30 segundos", "1 minuto", "2 minutos"],
+            bullets: ["30 segundos.", "1 minuto.", "2 minutos."],
             after:
               "Misma recomendación: sin distracciones, con calma. Es un hábito chico que puede generar insights grandes.",
           },
@@ -356,30 +356,30 @@ export const copy = {
         app: "Capybarista",
         title: "Privacidad en apps pequeñas",
         excerpt:
-          "Donde vive la politica de privacidad y como se organizan las futuras actualizaciones.",
+          "Dónde vive la política de privacidad y cómo se organizan las futuras actualizaciones.",
       },
     },
     privacy: {
       title: "Política de privacidad",
-      updated: "Ultima actualizacion: 30 de abril de 2026.",
+      updated: "Última actualización: 30 de abril de 2026.",
       intro:
-        "Capybarista desarrolla apps iOS independientes, incluyendo Checkpoint y Newen. La idea principal es simple: crear herramientas utiles que respeten la privacidad del usuario por defecto.",
+        "Capybarista desarrolla apps iOS independientes, incluyendo Checkpoint y Newen. La idea principal es simple: crear herramientas útiles que respeten la privacidad del usuario por defecto.",
       sections: [
         {
-          title: "Informacion general",
-          body: "Las apps de Capybarista estan publicadas bajo la cuenta personal del desarrollador en App Store. Al desarrollar estas apps, tomo decisiones pensadas para minimizar la informacion que se solicita, se procesa o se comparte.",
+          title: "Información general",
+          body: "Las apps de Capybarista están publicadas bajo la cuenta personal del desarrollador en App Store. Al desarrollar estas apps, tomo decisiones pensadas para minimizar la información que se solicita, se procesa o se comparte.",
         },
         {
           title: "Sin cuentas y sin backend propio",
-          body: "No necesitas crear una cuenta para usar nuestras apps. Capybarista no opera un backend propio para almacenar tus datos, no mantiene perfiles de usuario y no accede al contenido que guardas dentro de las apps.",
+          body: "No necesitás crear una cuenta para usar nuestras apps. Capybarista no opera un backend propio para almacenar tus datos, no mantiene perfiles de usuario y no accede al contenido que guardás dentro de las apps.",
         },
         {
-          title: "Almacenamiento y sincronizacion",
-          body: "Los datos que ingresas en las apps se guardan localmente en los dispositivos donde las usas. Cuando una app ofrece sincronizacion entre dispositivos, esa sincronizacion se realiza mediante iCloud, especificamente CloudKit, usando la base de datos privada asociada a tu cuenta de Apple. Capybarista no puede leer ni administrar ese contenido privado.",
+          title: "Almacenamiento y sincronización",
+          body: "Los datos que ingresás en las apps se guardan localmente en los dispositivos donde las usás. Cuando una app ofrece sincronización entre dispositivos, esa sincronización se realiza mediante iCloud, específicamente CloudKit, usando la base de datos privada asociada a tu cuenta de Apple. Capybarista no puede leer ni administrar ese contenido privado.",
         },
         {
-          title: "Informacion personal",
-          body: "Capybarista no recopila informacion personal identificable como nombre, correo electronico, telefono, ubicacion precisa, informacion financiera o identificadores de usuario propios. Tampoco vende datos personales ni comparte informacion con fines publicitarios.",
+          title: "Información personal",
+          body: "Capybarista no recopila información personal identificable como nombre, correo electrónico, teléfono, ubicación precisa, información financiera o identificadores de usuario propios. Tampoco vende datos personales ni comparte información con fines publicitarios.",
         },
         {
           title: "Analytics, publicidad y tracking",
@@ -387,19 +387,19 @@ export const copy = {
         },
         {
           title: "Apple Health / HealthKit",
-          body: "Las apps actuales de Capybarista no leen, escriben ni solicitan acceso a datos de Apple Health o HealthKit. Si una futura app necesitara integrarse con HealthKit, esta politica se actualizaria antes de publicar esa funcionalidad.",
+          body: "Las apps actuales de Capybarista no leen, escriben ni solicitan acceso a datos de Apple Health o HealthKit. Si una futura app necesitara integrarse con HealthKit, esta política se actualizaría antes de publicar esa funcionalidad.",
         },
         {
-          title: "Eliminacion de datos",
-          body: "Como tus datos viven en tu dispositivo y, cuando corresponde, en tu iCloud, puedes eliminarlos desde la app, eliminando la app del dispositivo o gestionando los datos de iCloud desde la configuracion de Apple. Si desactivas iCloud para una app, la sincronizacion entre dispositivos puede dejar de funcionar.",
+          title: "Eliminación de datos",
+          body: "Como tus datos viven en tu dispositivo y, cuando corresponde, en tu iCloud, podés eliminarlos desde la app, eliminando la app del dispositivo o gestionando los datos de iCloud desde la configuración de Apple. Si desactivás iCloud para una app, la sincronización entre dispositivos puede dejar de funcionar.",
         },
         {
           title: "Cookies y este sitio web",
-          body: "Este sitio web es una web estatica para presentar las apps de Capybarista y alojar esta politica de privacidad. No esta pensado para crear cuentas, recolectar informacion personal ni almacenar cookies propias para tracking.",
+          body: "Este sitio web es una web estática para presentar las apps de Capybarista y alojar esta política de privacidad. No está pensado para crear cuentas, recolectar información personal ni almacenar cookies propias para tracking.",
         },
         {
           title: "Cambios y contacto",
-          body: "Podemos actualizar esta Privacy Policy si cambian nuestras apps, funcionalidades o practicas de datos. Para consultas sobre privacidad, usa el canal de soporte indicado en la pagina de App Store de la app correspondiente. Cuando Capybarista tenga un correo publico de soporte, lo agregaremos tambien a esta pagina.",
+          body: "Podemos actualizar esta política de privacidad si cambian nuestras apps, funcionalidades o prácticas de datos. Para consultas sobre privacidad, usá el canal de soporte indicado en la página de App Store de la app correspondiente. Cuando Capybarista tenga un correo público de soporte, lo agregaremos también a esta página.",
         },
       ],
     },
