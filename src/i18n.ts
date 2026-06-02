@@ -361,7 +361,7 @@ export const copy = {
     },
     privacy: {
       title: "Política de privacidad",
-      updated: "Última actualización: 30 de abril de 2026.",
+      updated: "Última actualización: 2 de junio de 2026.",
       intro:
         "Capybarista desarrolla apps iOS independientes, incluyendo Checkpoint y Newen. La idea principal es simple: crear herramientas útiles que respeten la privacidad del usuario por defecto.",
       sections: [
@@ -387,7 +387,7 @@ export const copy = {
         },
         {
           title: "Apple Health / HealthKit",
-          body: "Las apps actuales de Capybarista no leen, escriben ni solicitan acceso a datos de Apple Health o HealthKit. Si una futura app necesitara integrarse con HealthKit, esta política se actualizaría antes de publicar esa funcionalidad.",
+          body: "Algunas apps de Capybarista pueden ofrecer integraciones opcionales con Apple Health usando HealthKit. En esta versión, Newen puede guardar nuevos check-ins de ánimo como entradas State of Mind en Apple Health si activás la sincronización con Apple Health y concedés permiso. Esta integración está desactivada por defecto. Newen no lee datos de Apple Health en esta versión, no sube datos de HealthKit a servidores de Capybarista y no comparte datos de HealthKit con terceros. Notas, etiquetas, contextos y registros históricos de ánimo no se exportan a Apple Health. Podés desactivar el acceso a Apple Health en cualquier momento desde la configuración de Newen o desde la configuración de privacidad de Salud de Apple en tu dispositivo.",
         },
         {
           title: "Eliminación de datos",
@@ -744,7 +744,7 @@ export const copy = {
     },
     privacy: {
       title: "Privacy Policy",
-      updated: "Last updated: April 30, 2026.",
+      updated: "Last updated: June 2, 2026.",
       intro:
         "Capybarista develops independent iOS apps, including Checkpoint and Newen. The core idea is simple: build useful tools that respect user privacy by default.",
       sections: [
@@ -770,7 +770,7 @@ export const copy = {
         },
         {
           title: "Apple Health / HealthKit",
-          body: "Current Capybarista apps do not read, write, or request access to Apple Health or HealthKit data. If a future app needs HealthKit integration, this policy will be updated before that functionality is released.",
+          body: "Some Capybarista apps may offer optional integrations with Apple Health using HealthKit. In this version, Newen can save new mood check-ins as State of Mind entries in Apple Health if you enable Apple Health sync and grant permission. This integration is off by default. Newen does not read Apple Health data in this version, does not upload HealthKit data to Capybarista servers, and does not share HealthKit data with third parties. Notes, tags, contexts, and historical mood entries are not exported to Apple Health. You can disable Apple Health access at any time from Newen settings or from Apple’s Health privacy settings on your device.",
         },
         {
           title: "Deleting data",
