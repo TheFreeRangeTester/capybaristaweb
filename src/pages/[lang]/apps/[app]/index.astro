@@ -4,10 +4,10 @@ import Header from "../../../../components/Header.astro";
 import Footer from "../../../../components/Footer.astro";
 import { copy, locales, type Locale } from "../../../../i18n";
 
-type AppKey = "checkpoint" | "newen";
+type AppKey = "checkpoint" | "newen" | "daypeek";
 
 export function getStaticPaths() {
-  const appKeys = ["checkpoint", "newen"] as const;
+  const appKeys = ["checkpoint", "newen", "daypeek"] as const;
   return locales.flatMap((lang) => appKeys.map((app) => ({ params: { lang, app } })));
 }
 
@@ -17,16 +17,25 @@ const t = copy[lang];
 const appCopy = t.apps[app];
 const checkpointSections = app === "checkpoint" ? t.apps.checkpoint.sections : null;
 const newenSections = app === "newen" ? t.apps.newen.sections : null;
+const daypeekSections = app === "daypeek" ? t.apps.daypeek.sections : null;
 const appStoreHrefs: Record<AppKey, string> = {
   checkpoint: "https://apps.apple.com/nz/app/checkpoint-companion/id6766421117",
   newen: "https://apps.apple.com/nz/app/newen/id6765529178",
+  daypeek: "https://apps.apple.com/nz/app/daypeek/id6779453761?mt=12",
 };
 const appStoreHref = appStoreHrefs[app];
 const guideHref =
   app === "checkpoint"
     ? `/${lang}/blog/checkpoint/primer-checkpoint/`
-    : `/${lang}/blog/newen/rutina-ligera/`;
-const guideTitle = app === "checkpoint" ? t.posts.checkpoint.title : t.posts.newen.title;
+    : app === "newen"
+      ? `/${lang}/blog/newen/rutina-ligera/`
+      : `/${lang}/blog/daypeek/ordenar-tu-dia/`;
+const guideTitle =
+  app === "checkpoint"
+    ? t.posts.checkpoint.title
+    : app === "newen"
+      ? t.posts.newen.title
+      : t.posts.daypeek.title;
 ---
 
 <BaseLayout title={`${appCopy.name} · Capybarista`} description={appCopy.description} lang={lang}>
@@ -188,6 +197,66 @@ const guideTitle = app === "checkpoint" ? t.posts.checkpoint.title : t.posts.new
                 <p>{guideTitle}</p>
               </div>
               <a class="button" href={guideHref}>{newenSections.guideCta}</a>
+            </section>
+
+            <section class="product-section compact-privacy">
+              <h2>{t.apps.privacyTitle}</h2>
+              <p>
+                {t.apps.privacyText}
+                <a href={`/${lang}/privacy-policy/`}>{t.nav.privacyPolicy}</a>.
+              </p>
+            </section>
+          </article>
+        ) : daypeekSections ? (
+          <article class="product-detail daypeek-detail">
+            <section class="product-intro daypeek-intro">
+              <div>
+                <img class="product-logo" src="/daypeek-logo.svg" alt="" aria-hidden="true" />
+                <h2>{appCopy.purposeTitle}</h2>
+                <p>{appCopy.purpose}</p>
+              </div>
+              <figure class="daypeek-intro-visual">
+                <img
+                  src="/daypeek-showcase.png"
+                  alt={`${appCopy.name} ${t.appDirectory.screenshotAlt}`}
+                  loading="eager"
+                  width="1536"
+                  height="1024"
+                />
+              </figure>
+            </section>
+
+            <section class="product-section split">
+              <div>
+                <h2>{daypeekSections.glanceTitle}</h2>
+                <p>{daypeekSections.glanceText}</p>
+              </div>
+              <div class="feature-stack">
+                {daypeekSections.glanceItems.map((item) => (
+                  <article class="feature-line">
+                    <h3>{item.title}</h3>
+                    <p>{item.body}</p>
+                  </article>
+                ))}
+              </div>
+            </section>
+
+            <section class="product-section daypeek-guide">
+              <div>
+                <h2>{daypeekSections.guideTitle}</h2>
+                <p>{daypeekSections.guideText}</p>
+              </div>
+              <ul class="check-list">
+                {daypeekSections.guideItems.map((item) => <li>{item}</li>)}
+              </ul>
+            </section>
+
+            <section class="guide-band">
+              <div>
+                <h2>{t.apps.guidesTitle}</h2>
+                <p>{guideTitle}</p>
+              </div>
+              <a class="button" href={guideHref}>{daypeekSections.guideCta}</a>
             </section>
 
             <section class="product-section compact-privacy">

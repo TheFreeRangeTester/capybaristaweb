@@ -661,6 +661,10 @@ img {
   object-fit: cover;
 }
 
+.app-card-media.daypeek img {
+  object-position: center top;
+}
+
 .app-showcase {
   display: grid;
   grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr);
@@ -1245,6 +1249,37 @@ img {
   object-fit: cover;
 }
 
+.daypeek-intro {
+  grid-template-columns: minmax(0, 0.68fr) minmax(360px, 1.18fr);
+  align-items: center;
+  border-top: 0;
+  border-radius: 8px;
+  padding: clamp(24px, 4.5vw, 48px);
+  background:
+    linear-gradient(135deg, rgba(255, 250, 242, 0.92), rgba(255, 229, 211, 0.64)),
+    var(--surface);
+  box-shadow: 0 22px 70px rgba(74, 52, 32, 0.08);
+}
+
+.daypeek-intro-visual {
+  justify-self: end;
+  width: 100%;
+  margin: 0;
+  border: 1px solid rgba(255, 91, 22, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 250, 242, 0.74);
+  box-shadow: 0 24px 80px rgba(74, 52, 32, 0.14);
+  overflow: hidden;
+}
+
+.daypeek-intro-visual img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+}
+
 .product-logo {
   width: 72px;
   height: 72px;
@@ -1271,6 +1306,7 @@ img {
 .checkpoint-resume,
 .privacy-feature,
 .watch-section,
+.daypeek-guide,
 .guide-band {
   display: grid;
   grid-template-columns: minmax(0, 0.88fr) minmax(0, 1fr);
@@ -1397,6 +1433,10 @@ img {
 .watch-list {
   border-left: 1px solid rgba(95, 65, 40, 0.14);
   padding-left: clamp(22px, 4vw, 42px);
+}
+
+.daypeek-guide {
+  align-items: center;
 }
 
 .guide-band {
@@ -1530,16 +1570,19 @@ img {
 
   .product-intro,
   .newen-intro,
+  .daypeek-intro,
   .product-section.split,
   .checkpoint-resume,
   .privacy-feature,
   .watch-section,
+  .daypeek-guide,
   .guide-band {
     grid-template-columns: 1fr;
   }
 
   .privacy-visual,
   .newen-intro-visual,
+  .daypeek-intro-visual,
   .guide-band .button {
     justify-self: start;
   }

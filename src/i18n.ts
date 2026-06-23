@@ -23,9 +23,9 @@ export function oppositeLocale(locale: Locale): Locale {
 export const copy = {
   es: {
     meta: {
-      homeTitle: "Capybarista · Apps for iOS",
+      homeTitle: "Capybarista · Apps para iOS y macOS",
       homeDescription:
-        "Capybarista es un estudio independiente de apps iOS creado por un ingeniero argentino en Nueva Zelanda, con foco en calidad de software, privacidad y productos útiles.",
+        "Capybarista es un estudio independiente de apps para iOS y macOS creado por un ingeniero argentino en Nueva Zelanda, con foco en calidad de software, privacidad y productos útiles.",
     },
     nav: {
       apps: "Apps",
@@ -36,15 +36,15 @@ export const copy = {
     home: {
       heroTitle: "Hola 👋🏻",
       intro:
-        "Somos Capybarista, un estudio indie para apps iOS con aroma a café, foco tranquilo y pequeñas herramientas premium. Creamos experiencias simples para volver a tu estado mental, tus juegos y tus rutinas sin fricción.",
+        "Somos Capybarista, un estudio indie para apps iOS y macOS con aroma a café, foco tranquilo y pequeñas herramientas premium. Creamos experiencias simples para volver a tu estado mental, tus juegos y tus rutinas sin fricción.",
       explore: "Explorar apps",
       readBlog: "Leer el blog",
-      appsTitle: "Apps iOS para volver a tu ritmo.",
+      appsTitle: "Apps para volver a tu ritmo.",
       appsText:
         "Cada producto tiene una página propia, su blog y acceso directo a la política de privacidad compartida del estudio.",
       aboutTitle: "Un estudio indie, una persona detrás.",
       aboutText:
-        "Capybarista es el proyecto de un desarrollador argentino viviendo en Nueva Zelanda, con más de 16 años dedicado a la ingeniería de calidad en software. Después de años ayudando a crear productos confiables, decidí construir aplicaciones iOS propias con la calidad, la privacidad y la experiencia diaria como foco principal.",
+        "Capybarista es el proyecto de un desarrollador argentino viviendo en Nueva Zelanda, con más de 16 años dedicado a la ingeniería de calidad en software. Después de años ayudando a crear productos confiables, decidí construir aplicaciones propias para iOS y macOS con la calidad, la privacidad y la experiencia diaria como foco principal.",
       aboutNote:
         "Creo productos que quiero que existan para usarlos yo también: herramientas simples, cuidadas y honestas para personas con gustos y necesidades parecidas.",
       aboutPhotoAlt: "Fundador de Capybarista en Nueva Zelanda",
@@ -62,7 +62,7 @@ export const copy = {
     appDirectory: {
       title: "Apps",
       intro:
-        "Apps iOS simples, privadas y cuidadas. Las construyo para usarlas yo también, y espero que también le sirvan a personas con gustos y necesidades parecidas.",
+        "Apps simples, privadas y cuidadas para iOS y macOS. Las construyo para usarlas yo también, y espero que también le sirvan a personas con gustos y necesidades parecidas.",
       appStoreSoon: "App Store pronto",
       screenshotAlt: "Vista previa de la app",
       learnMore: "Detalles",
@@ -166,6 +166,48 @@ export const copy = {
             "Registros rápidos cuando algo acaba de pasar.",
             "Reflexiones breves de 30 segundos a 2 minutos.",
             "Una forma menos invasiva de mantener consistencia durante el día.",
+          ],
+          guideCta: "Leer guía de uso",
+        },
+      },
+      daypeek: {
+        name: "DayPeek",
+        description:
+          "Una utilidad para macOS que lleva tus Calendarios y Recordatorios de Apple a la menu bar, para ver y actuar sobre el día sin cambiar de contexto.",
+        tags: ["Menu bar", "Recordatorios", "macOS"],
+        detailTitle: "DayPeek",
+        detailIntro:
+          "Tus recordatorios y eventos del calendario, siempre a un vistazo desde la menu bar de macOS.",
+        purposeTitle: "Para qué sirve",
+        purpose:
+          "DayPeek expande Apple Calendars y Reminders con una vista rápida en la barra de menús. Te ayuda a ver lo próximo, completar recordatorios y seguir el ritmo del día sin abrir otra app.",
+        sections: {
+          glanceTitle: "Tu día donde ya estás mirando",
+          glanceText:
+            "DayPeek vive en la menu bar para que puedas revisar lo urgente sin cambiar de espacio, abrir una ventana grande o romper el flujo de trabajo.",
+          glanceItems: [
+            {
+              title: "Recordatorios visibles",
+              body: "El recordatorio más importante queda a mano, junto con la lista de pendientes de hoy.",
+            },
+            {
+              title: "Eventos próximos",
+              body: "Tus reuniones y eventos aparecen en una vista compacta para entender qué viene después.",
+            },
+            {
+              title: "Acciones rápidas",
+              body: "Podés completar o agregar recordatorios del día directamente desde la menu bar.",
+            },
+          ],
+          guideTitle: "Cómo recomiendo usarla",
+          guideText:
+            "DayPeek funciona mejor cuando tus recordatorios ya reflejan tu intención para el día. No hace falta armar un sistema complejo: solo ordenar lo que viene.",
+          guideItems: [
+            "Acomodá los recordatorios en el orden en que planeás hacerlos para que DayPeek te muestre como próximo el que realmente querés encarar.",
+            "Usá Reminders para lo que realmente necesita un recordatorio: algo que tenés que iniciar o hacer vos.",
+            "Usá Calendar para eventos que van a ocurrir sí o sí en un momento concreto, aunque no dependan de que vos los empieces.",
+            "Usá recordatorios simples y accionables, no listas enormes que después no querés mirar.",
+            "Cuando terminás todo lo de hoy, DayPeek pasa a mostrarte qué viene mañana, para que cierres el día con contexto sin seguir buscando.",
           ],
           guideCta: "Leer guía de uso",
         },
@@ -352,6 +394,53 @@ export const copy = {
           },
         ],
       },
+      daypeek: {
+        title: "Cómo usar DayPeek para ordenar tu día",
+        excerpt:
+          "Una guía breve para aprovechar DayPeek con recordatorios ordenados y una vista clara de lo que viene.",
+        intro:
+          "DayPeek es una app chica a propósito: vive en la menu bar para mostrar lo próximo sin hacerte administrar otro sistema.",
+        image: "/daypeek-showcase.png",
+        imageAlt: "DayPeek mostrando recordatorios y eventos de calendario desde la menu bar de macOS",
+        cta: {
+          title: "Listo para ver tu día de un vistazo",
+          body: "DayPeek ya está disponible en App Store para macOS.",
+          label: "Ver en App Store",
+          href: "https://apps.apple.com/nz/app/daypeek/id6779453761?mt=12",
+        },
+        sections: [
+          {
+            title: "Ordená los recordatorios como querés hacerlos",
+            body: [
+              "El mejor tip para DayPeek es también el más simple: ordená tus recordatorios en Apple Reminders según el plan real de tu día.",
+              "Si lo primero que querés hacer es preparar una presentación, poné ese recordatorio arriba. Si después viene llamar a alguien o revisar algo, acomodalo en ese orden. DayPeek toma esa intención y la convierte en una señal visible en la menu bar.",
+            ],
+          },
+          {
+            title: "Mantené cada recordatorio accionable",
+            body: "DayPeek brilla cuando lo que aparece en la barra de menús es concreto. En vez de una lista enorme y vaga, conviene escribir pendientes que puedas completar de verdad.",
+            bullets: [
+              "Usá verbos claros: llamar, revisar, enviar, preparar.",
+              "Separá tareas grandes en pasos chicos cuando sea útil.",
+              "Dejá arriba el próximo paso, no necesariamente el más importante en abstracto.",
+            ],
+          },
+          {
+            title: "Separá recordatorios de eventos",
+            body: [
+              "Mi regla práctica es usar Reminders para cosas que necesitan que yo las recuerde y las empiece: llamar a alguien, enviar algo, revisar un documento, preparar una compra.",
+              "Calendar lo reservo para eventos que van a ocurrir en un momento concreto aunque yo no tenga que iniciarlos: una reunión, una clase, una cita médica, un vencimiento con horario definido. Esa separación hace que DayPeek pueda mostrarte mejor qué tenés que hacer y qué simplemente se viene.",
+            ],
+          },
+          {
+            title: "Cuando hoy ya está listo",
+            body: [
+              "Si completaste todos los pendientes del día, DayPeek no se queda vacío ni te obliga a seguir revisando listas.",
+              "En ese caso, te muestra qué viene el día siguiente. La idea es cerrar el presente con tranquilidad y tener una pista liviana de lo próximo.",
+            ],
+          },
+        ],
+      },
       privacyCard: {
         app: "Capybarista",
         title: "Privacidad en apps pequeñas",
@@ -361,9 +450,9 @@ export const copy = {
     },
     privacy: {
       title: "Política de privacidad",
-      updated: "Última actualización: 2 de junio de 2026.",
+      updated: "Última actualización: 24 de junio de 2026.",
       intro:
-        "Capybarista desarrolla apps iOS independientes, incluyendo Checkpoint y Newen. La idea principal es simple: crear herramientas útiles que respeten la privacidad del usuario por defecto.",
+        "Capybarista desarrolla apps independientes para iOS y macOS, incluyendo Checkpoint, Newen y DayPeek. La idea principal es simple: crear herramientas útiles que respeten la privacidad del usuario por defecto.",
       sections: [
         {
           title: "Información general",
@@ -406,9 +495,9 @@ export const copy = {
   },
   en: {
     meta: {
-      homeTitle: "Capybarista · Apps for iOS",
+      homeTitle: "Capybarista · Apps for iOS and macOS",
       homeDescription:
-        "Capybarista is an independent iOS app studio by an Argentine software quality engineer in New Zealand, focused on private, polished, useful apps.",
+        "Capybarista is an independent iOS and macOS app studio by an Argentine software quality engineer in New Zealand, focused on private, polished, useful apps.",
     },
     nav: {
       apps: "Apps",
@@ -419,15 +508,15 @@ export const copy = {
     home: {
       heroTitle: "Hello 👋🏻",
       intro:
-        "We are Capybarista, an indie iOS app studio with coffee energy, quiet focus, and premium little tools. We build simple experiences for returning to your mood, your games, and your routines without friction.",
+        "We are Capybarista, an indie iOS and macOS app studio with coffee energy, quiet focus, and premium little tools. We build simple experiences for returning to your mood, your games, and your routines without friction.",
       explore: "Explore apps",
       readBlog: "Read the blog",
-      appsTitle: "iOS apps for returning to your rhythm.",
+      appsTitle: "Apps for returning to your rhythm.",
       appsText:
         "Each product has its own page, app-specific blog posts, and direct access to the studio privacy policy.",
       aboutTitle: "An indie studio with one person behind it.",
       aboutText:
-        "Capybarista is built by an Argentine developer living in New Zealand, with more than 16 years dedicated to software quality engineering. After years helping teams ship reliable products, I decided to create my own iOS apps with quality, privacy, and everyday usefulness as the main focus.",
+        "Capybarista is built by an Argentine developer living in New Zealand, with more than 16 years dedicated to software quality engineering. After years helping teams ship reliable products, I decided to create my own iOS and macOS apps with quality, privacy, and everyday usefulness as the main focus.",
       aboutNote:
         "I build products I genuinely want to exist and use myself: simple, carefully made, honest tools for people with similar tastes and needs.",
       aboutPhotoAlt: "Capybarista founder in New Zealand",
@@ -445,7 +534,7 @@ export const copy = {
     appDirectory: {
       title: "Apps",
       intro:
-        "Simple, private, carefully made iOS apps. I build them for myself first, and hope they are useful for people with similar tastes and needs.",
+        "Simple, private, carefully made apps for iOS and macOS. I build them for myself first, and hope they are useful for people with similar tastes and needs.",
       appStoreSoon: "App Store soon",
       screenshotAlt: "App preview",
       learnMore: "Details",
@@ -549,6 +638,48 @@ export const copy = {
             "Quick logs right after something happens.",
             "Short reflection sessions from 30 seconds to 2 minutes.",
             "A less intrusive way to stay consistent throughout the day.",
+          ],
+          guideCta: "Read usage guide",
+        },
+      },
+      daypeek: {
+        name: "DayPeek",
+        description:
+          "A macOS utility that brings your Apple Calendars and Reminders into the menu bar, so you can see and act on your day without switching context.",
+        tags: ["Menu bar", "Reminders", "macOS"],
+        detailTitle: "DayPeek",
+        detailIntro:
+          "Your reminders and calendar events, always one glance away from the macOS menu bar.",
+        purposeTitle: "What it is for",
+        purpose:
+          "DayPeek extends Apple Calendars and Reminders with a quick menu bar view. It helps you see what is next, complete reminders, and keep the day moving without opening another app.",
+        sections: {
+          glanceTitle: "Your day where you already look",
+          glanceText:
+            "DayPeek lives in the menu bar so you can check what matters without switching spaces, opening a large window, or breaking your flow.",
+          glanceItems: [
+            {
+              title: "Visible reminders",
+              body: "The most important reminder stays close, alongside your list of pending items for today.",
+            },
+            {
+              title: "Upcoming events",
+              body: "Your meetings and calendar events appear in a compact view so you can understand what comes next.",
+            },
+            {
+              title: "Quick actions",
+              body: "Complete or add reminders for today directly from the menu bar.",
+            },
+          ],
+          guideTitle: "How I recommend using it",
+          guideText:
+            "DayPeek works best when your reminders already reflect your intention for the day. You do not need a complex system: just order what comes next.",
+          guideItems: [
+            "Arrange your reminders in the order you plan to do them, so DayPeek shows the next one you actually want to handle.",
+            "Use Reminders for what reminders are really for: something you need to start or do yourself.",
+            "Use Calendar for events that will happen at a specific time whether or not you initiate them.",
+            "Use simple, actionable reminders instead of huge lists you will not want to look at later.",
+            "When you finish everything for today, DayPeek shows what is coming tomorrow, so you can close the day with context without digging around.",
           ],
           guideCta: "Read usage guide",
         },
@@ -735,6 +866,53 @@ export const copy = {
           },
         ],
       },
+      daypeek: {
+        title: "How to use DayPeek to organize your day",
+        excerpt:
+          "A short guide to getting more out of DayPeek with ordered reminders and a clear view of what is next.",
+        intro:
+          "DayPeek is small on purpose: it lives in the menu bar to show what is next without making you manage another system.",
+        image: "/daypeek-showcase.png",
+        imageAlt: "DayPeek showing reminders and calendar events from the macOS menu bar",
+        cta: {
+          title: "Ready to see your day at a glance",
+          body: "DayPeek is available now on the App Store for macOS.",
+          label: "View on App Store",
+          href: "https://apps.apple.com/nz/app/daypeek/id6779453761?mt=12",
+        },
+        sections: [
+          {
+            title: "Order reminders the way you plan to do them",
+            body: [
+              "The best DayPeek tip is also the simplest one: order your Apple Reminders according to your real plan for the day.",
+              "If the first thing you want to do is prepare a presentation, put that reminder at the top. If calling someone or reviewing something comes next, place it after that. DayPeek turns that intention into a visible signal in the menu bar.",
+            ],
+          },
+          {
+            title: "Keep each reminder actionable",
+            body: "DayPeek works best when the thing in your menu bar is concrete. Instead of a huge vague list, write reminders you can actually complete.",
+            bullets: [
+              "Use clear verbs: call, review, send, prepare.",
+              "Split larger tasks into smaller steps when it helps.",
+              "Keep the next step at the top, not necessarily the abstractly most important one.",
+            ],
+          },
+          {
+            title: "Separate reminders from events",
+            body: [
+              "My practical rule is to use Reminders for things I need to remember and start myself: call someone, send something, review a document, prepare a shopping list.",
+              "I reserve Calendar for events that will happen at a specific time even if I do not initiate them: a meeting, a class, a doctor appointment, a deadline with a defined time. That separation helps DayPeek show what you need to do and what is simply coming up.",
+            ],
+          },
+          {
+            title: "When today is done",
+            body: [
+              "If you complete every reminder for the day, DayPeek does not leave you staring at an empty state or make you keep checking lists.",
+              "Instead, it shows what is coming tomorrow. The idea is to close today calmly and keep a light sense of what is next.",
+            ],
+          },
+        ],
+      },
       privacyCard: {
         app: "Capybarista",
         title: "Privacy in small apps",
@@ -744,9 +922,9 @@ export const copy = {
     },
     privacy: {
       title: "Privacy Policy",
-      updated: "Last updated: June 2, 2026.",
+      updated: "Last updated: June 24, 2026.",
       intro:
-        "Capybarista develops independent iOS apps, including Checkpoint and Newen. The core idea is simple: build useful tools that respect user privacy by default.",
+        "Capybarista develops independent apps for iOS and macOS, including Checkpoint, Newen, and DayPeek. The core idea is simple: build useful tools that respect user privacy by default.",
       sections: [
         {
           title: "General information",
