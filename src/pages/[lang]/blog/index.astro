@@ -11,13 +11,25 @@ export function getStaticPaths() {
 
 const lang = Astro.params.lang as Locale;
 const t = copy[lang];
+const imageAlts =
+  lang === "es"
+    ? {
+        checkpoint: "Control de videojuegos sobre un escritorio de madera con luz cálida",
+        newen: "Persona escribiendo en un cuaderno durante una pausa tranquila",
+        daypeek: "Agenda mensual abierta junto a una taza de café",
+      }
+    : {
+        checkpoint: "Game controller on a wooden desk in warm light",
+        newen: "Person writing in a notebook during a quiet pause",
+        daypeek: "Open monthly planner beside a cup of coffee",
+      };
 ---
 
 <BaseLayout title={`${t.blogIndex.title} · Capybarista`} description={t.blogIndex.intro} lang={lang}>
   <div class="page">
     <Header lang={lang} labels={t.nav} />
-    <main class="shell">
-      <section class="page-title">
+    <main class="shell blog-shell">
+      <section class="page-title blog-page-title">
         <h1>{t.blogIndex.title}</h1>
         <p>{t.blogIndex.intro}</p>
       </section>
@@ -29,6 +41,9 @@ const t = copy[lang];
           href={`/${lang}/blog/checkpoint/primer-checkpoint/`}
           excerpt={t.posts.checkpoint.excerpt}
           cta={t.home.readGuide}
+          imageSrc="/blog-checkpoint-unsplash.jpg"
+          imageAlt={imageAlts.checkpoint}
+          featured
         />
         <PostCard
           app="Newen"
@@ -36,6 +51,8 @@ const t = copy[lang];
           href={`/${lang}/blog/newen/rutina-ligera/`}
           excerpt={t.posts.newen.excerpt}
           cta={t.home.readGuide}
+          imageSrc="/blog-newen-unsplash.jpg"
+          imageAlt={imageAlts.newen}
         />
         <PostCard
           app="DayPeek"
@@ -43,6 +60,8 @@ const t = copy[lang];
           href={`/${lang}/blog/daypeek/ordenar-tu-dia/`}
           excerpt={t.posts.daypeek.excerpt}
           cta={t.home.readGuide}
+          imageSrc="/blog-daypeek-unsplash.jpg"
+          imageAlt={imageAlts.daypeek}
         />
       </section>
     </main>

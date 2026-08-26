@@ -5,14 +5,34 @@ interface Props {
   excerpt: string;
   href: string;
   cta: string;
+  imageSrc: string;
+  imageAlt: string;
+  featured?: boolean;
 }
 
-const { app, title, excerpt, href, cta } = Astro.props;
+const { app, title, excerpt, href, cta, imageSrc, imageAlt, featured = false } = Astro.props;
 ---
 
-<article class="post-card">
-  <span class="app-name">{app}</span>
-  <h3>{title}</h3>
-  <p>{excerpt}</p>
-  <p><a class="text-link" href={href}>{cta}</a></p>
+<article class:list={["post-card", app.toLowerCase(), { featured }]}>
+  <a class="post-card-link" href={href} aria-label={`${cta}: ${title}`}>
+    <div class="post-card-media">
+      <img
+        src={imageSrc}
+        alt={imageAlt}
+        loading={featured ? "eager" : "lazy"}
+        decoding="async"
+        width="1600"
+        height="900"
+      />
+    </div>
+    <div class="post-card-copy">
+      <span class="app-name">{app}</span>
+      <h2>{title}</h2>
+      <p>{excerpt}</p>
+      <span class="post-card-cta">
+        {cta}
+        <i class="ph ph-arrow-right" aria-hidden="true"></i>
+      </span>
+    </div>
+  </a>
 </article>
