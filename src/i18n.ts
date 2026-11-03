@@ -450,7 +450,7 @@ export const copy = {
     },
     privacy: {
       title: "Política de privacidad",
-      updated: "Última actualización: 24 de junio de 2026.",
+      updated: "Última actualización: 4 de noviembre de 2026.",
       intro:
         "Capybarista desarrolla apps independientes para iOS y macOS, incluyendo Checkpoint, Newen y DayPeek. La idea principal es simple: crear herramientas útiles que respeten la privacidad del usuario por defecto.",
       sections: [
@@ -459,8 +459,8 @@ export const copy = {
           body: "Las apps de Capybarista están publicadas bajo la cuenta personal del desarrollador en App Store. Al desarrollar estas apps, tomo decisiones pensadas para minimizar la información que se solicita, se procesa o se comparte.",
         },
         {
-          title: "Sin cuentas y sin backend propio",
-          body: "No necesitás crear una cuenta para usar nuestras apps. Capybarista no opera un backend propio para almacenar tus datos, no mantiene perfiles de usuario y no accede al contenido que guardás dentro de las apps.",
+          title: "Sin cuentas ni perfiles de usuario",
+          body: "No necesitás crear una cuenta para usar nuestras apps. Capybarista no mantiene perfiles de usuario. Tus notas, objetivos, fotos y biblioteca personal no se almacenan en nuestro servicio de catálogo. La búsqueda de juegos de Checkpoint usa un servicio propio, según se explica a continuación.",
         },
         {
           title: "Almacenamiento y sincronización",
@@ -468,7 +468,23 @@ export const copy = {
         },
         {
           title: "Información personal",
-          body: "Capybarista no recopila información personal identificable como nombre, correo electrónico, teléfono, ubicación precisa, información financiera o identificadores de usuario propios. Tampoco vende datos personales ni comparte información con fines publicitarios.",
+          body: "Nuestras apps no te piden nombre, correo electrónico, teléfono, ubicación precisa ni información financiera para usar sus funciones, ni crean identificadores de usuario propios. La búsqueda de juegos procesa el texto que escribís y los proveedores reciben datos técnicos de conexión, como se detalla a continuación. No vendemos datos personales ni compartimos información con fines publicitarios.",
+        },
+        {
+          title: "Búsqueda de juegos en Checkpoint",
+          body: "A partir de Checkpoint 1.9, al escribir al menos tres caracteres de un título en el formulario de juegos, la app envía el texto de búsqueda por HTTPS a un servicio de Capybarista alojado en Cloudflare. Este servicio consulta IGDB para obtener nombres y portadas, salvo que pueda reutilizar un resultado en caché. Solo enviamos el texto de búsqueda a IGDB; no reenviamos tu dirección IP ni los encabezados de tu dispositivo. Tus notas, objetivos, fotos personales y biblioteca no se envían mediante esta función. No necesitás una cuenta de Twitch. También podés agregar juegos manualmente sin conexión.",
+        },
+        {
+          title: "Caché y portadas",
+          body: "El servicio mantiene el texto de las búsquedas y sus resultados en una caché compartida en memoria, sin asociarlos a cuentas ni identificadores de dispositivo. Puede reutilizar resultados durante 24 horas, o durante 5 minutos si no hubo coincidencias. Estos plazos determinan cuándo vuelve a consultar el catálogo; las entradas se descartan al ser reemplazadas o expulsadas de la caché, o al liberarse la instancia del servicio. No se guardan búsquedas en una base de datos en disco. Las portadas se descargan directamente desde el proveedor de imágenes de IGDB, que recibe tu dirección IP y datos de la solicitud. Las portadas que guardás se conservan con la biblioteca local y pueden aparecer en widgets y copias de seguridad que exportes.",
+        },
+        {
+          title: "Proveedores y registros técnicos",
+          body: "Cloudflare aloja y protege el servicio de catálogo; IGDB, un servicio de Twitch, proporciona los datos de juegos y sus imágenes. Los proveedores pueden procesar direcciones IP y metadatos de las solicitudes para entregar y proteger sus servicios. Los logs de aplicación del servicio de catálogo están desactivados y su código no registra consultas, direcciones IP ni identificadores de usuario. Esto no elimina los registros técnicos o de seguridad que los proveedores puedan conservar conforme a sus propias políticas. Sus periodos de conservación y opciones de privacidad se describen en los enlaces siguientes. Las solicitudes pueden procesarse en países distintos del tuyo.",
+          links: [
+            { label: "Cloudflare", href: "https://www.cloudflare.com/privacypolicy/" },
+            { label: "Twitch / IGDB", href: "https://legal.twitch.com/en/legal/privacy-notice/" },
+          ],
         },
         {
           title: "Analytics, publicidad y tracking",
@@ -480,7 +496,7 @@ export const copy = {
         },
         {
           title: "Eliminación de datos",
-          body: "Como tus datos viven en tu dispositivo y, cuando corresponde, en tu iCloud, podés eliminarlos desde la app, eliminando la app del dispositivo o gestionando los datos de iCloud desde la configuración de Apple. Si desactivás iCloud para una app, la sincronización entre dispositivos puede dejar de funcionar.",
+          body: "Podés eliminar el contenido personal guardado desde la app, eliminando la app del dispositivo o gestionando los datos de iCloud desde la configuración de Apple, según corresponda. Si desactivás iCloud para una app, la sincronización entre dispositivos puede dejar de funcionar. Las copias de seguridad que exportaste se administran por separado donde las hayas guardado. Eliminar la app no elimina la caché compartida del catálogo ni los registros de infraestructura de los proveedores. Podés solicitar información sobre acceso o eliminación mediante el canal de contacto indicado al final de esta política.",
         },
         {
           title: "Cookies y este sitio web",
@@ -922,7 +938,7 @@ export const copy = {
     },
     privacy: {
       title: "Privacy Policy",
-      updated: "Last updated: June 24, 2026.",
+      updated: "Last updated: November 4, 2026.",
       intro:
         "Capybarista develops independent apps for iOS and macOS, including Checkpoint, Newen, and DayPeek. The core idea is simple: build useful tools that respect user privacy by default.",
       sections: [
@@ -931,8 +947,8 @@ export const copy = {
           body: "Capybarista apps are released on the App Store under the developer’s personal account. When building these apps, I make product and engineering decisions that minimize the information requested, processed, or shared.",
         },
         {
-          title: "No accounts and no custom backend",
-          body: "You do not need to create an account to use our apps. Capybarista does not operate a custom backend to store your data, does not maintain user profiles, and does not access the content you save inside the apps.",
+          title: "No accounts or user profiles",
+          body: "You do not need to create an account to use our apps. Capybarista does not maintain user profiles. Your personal notes, objectives, photos, and game library are not stored in our catalog service. Checkpoint game lookup uses a service we operate, as explained below.",
         },
         {
           title: "Storage and sync",
@@ -940,7 +956,23 @@ export const copy = {
         },
         {
           title: "Personal information",
-          body: "Capybarista does not collect personally identifying information such as your name, email address, phone number, precise location, financial information, or custom user identifiers. We do not sell personal data or share information for advertising.",
+          body: "Our apps do not ask for your name, email address, phone number, precise location, or financial information to use their features, and do not create custom user identifiers. Game lookup processes the text you type, and service providers receive technical connection data, as detailed below. We do not sell personal data or share information for advertising.",
+        },
+        {
+          title: "Game lookup in Checkpoint",
+          body: "Starting with Checkpoint 1.9, when you type at least three characters of a title in the game form, the app sends the search text over HTTPS to a Capybarista service hosted on Cloudflare. This service queries IGDB for game names and covers unless it can reuse a cached result. We send only the search text to IGDB; we do not forward your IP address or device headers. Your personal notes, objectives, photos, and library are not sent through this feature. You do not need a Twitch account. You can also add games manually while offline.",
+        },
+        {
+          title: "Cache and covers",
+          body: "The service holds search text and results in a shared memory cache without linking them to accounts or device identifiers. It may reuse results for 24 hours, or for 5 minutes if no matches were found. These periods determine when the catalog is queried again; entries are discarded when replaced or evicted from the cache, or when the service instance is cleared. Searches are not saved to an on-disk database. Covers are downloaded directly from IGDB’s image provider, which receives your IP address and request details. Covers you save are kept with your local library and may appear in widgets and backups you export.",
+        },
+        {
+          title: "Providers and technical logs",
+          body: "Cloudflare hosts and protects the catalog service; IGDB, a Twitch service, provides game data and images. Providers may process IP addresses and request metadata to deliver and protect their services. Application logs for the catalog service are disabled, and its code does not log queries, IP addresses, or user identifiers. This does not remove technical or security records providers may retain under their own policies. Their retention periods and privacy choices are described in the links below. Requests may be processed in countries other than your own.",
+          links: [
+            { label: "Cloudflare", href: "https://www.cloudflare.com/privacypolicy/" },
+            { label: "Twitch / IGDB", href: "https://legal.twitch.com/en/legal/privacy-notice/" },
+          ],
         },
         {
           title: "Analytics, advertising, and tracking",
@@ -952,7 +984,7 @@ export const copy = {
         },
         {
           title: "Deleting data",
-          body: "Because your data lives on your device and, when applicable, in your iCloud account, you can delete it from within the app, by deleting the app from your device, or by managing iCloud data from Apple settings. If you disable iCloud for an app, sync across devices may stop working.",
+          body: "You can delete saved personal content from within the app, by deleting the app from your device, or by managing iCloud data in Apple settings, as applicable. If you disable iCloud for an app, sync across devices may stop working. Backups you export are managed separately wherever you save them. Deleting the app does not delete the shared catalog cache or providers’ infrastructure logs. You can ask about access or deletion through the contact channel at the end of this policy.",
         },
         {
           title: "Cookies and this website",
