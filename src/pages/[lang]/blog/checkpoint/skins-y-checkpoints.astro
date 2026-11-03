@@ -1,0 +1,140 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Header.astro";
+import Footer from "../../../../components/Footer.astro";
+import { copy, locales, type Locale } from "../../../../i18n";
+import { checkpointUpdate } from "../../../../posts/checkpoint-update";
+
+export function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+const lang = Astro.params.lang as Locale;
+const t = copy[lang];
+const post = checkpointUpdate[lang];
+---
+
+<BaseLayout title={post.title + " · Capybarista"} description={post.excerpt} lang={lang} image="/checkpoint-update/four-worlds-hero.png" imageAlt={post.heroAlt}>
+  <div class="page">
+    <Header lang={lang} labels={t.nav} />
+    <main class="shell">
+      <header class="page-title update-title">
+        <p class="update-meta"><span>{post.badge}</span> <time datetime="2026-11-04">{post.date}</time></p>
+        <h1>{post.title}</h1>
+        <p>{post.intro}</p>
+      </header>
+      <article class="content post-content update-content">
+        <aside class="release-note">{post.status}</aside>
+        <figure class="update-hero">
+          <img src="/checkpoint-update/four-worlds-hero.png" width="1672" height="941" alt={post.heroAlt} loading="eager" decoding="async" />
+          <figcaption>{post.heroCaption}</figcaption>
+        </figure>
+        <div class="reading-copy">
+          {post.opening.map((paragraph) => <p>{paragraph}</p>)}
+          <h2>{post.skinsTitle}</h2>
+          <p>{post.skinsIntro}</p>
+        </div>
+        <div class="skin-grid">
+          {post.skins.map((skin) => (
+            <section class={"skin-preview " + skin.id} aria-labelledby={"skin-" + skin.id}>
+              <h3 id={"skin-" + skin.id}>{skin.name}</h3>
+              <p>{skin.body}</p>
+              <figure>
+                <a href={"/checkpoint-update/" + skin.id + "-library.png"} target="_blank" rel="noreferrer" aria-label={skin.alt}>
+                  <img src={"/checkpoint-update/" + skin.id + "-library.png"} width="1170" height="2532" alt={skin.alt} loading="lazy" decoding="async" />
+                </a>
+                <figcaption>{post.screenLabel}</figcaption>
+              </figure>
+              <figure class="widget-preview">
+                <img src={"/checkpoint-update/" + skin.id + "-widget-small.png"} width="510" height="510" alt={skin.widgetAlt} loading="lazy" decoding="async" />
+                <figcaption>{post.widgetLabel}</figcaption>
+              </figure>
+            </section>
+          ))}
+        </div>
+        <p class="capture-note">{post.screenshotNote}</p>
+        <section class="reading-copy">
+          <h2>{post.switchTitle}</h2>
+          <p>{post.switchBody}</p>
+        </section>
+        <section class="quick-preview">
+          <div>
+            <h2>{post.quickTitle}</h2>
+            {post.quickBody.map((paragraph) => <p>{paragraph}</p>)}
+            <h2>{post.resumeTitle}</h2>
+            <p>{post.resumeBody}</p>
+            <blockquote>{post.objectiveExample}</blockquote>
+            <p>{post.objectiveBody}</p>
+          </div>
+          <figure>
+            <a href="/checkpoint-update/cozy-composer.png" target="_blank" rel="noreferrer" aria-label={post.composerAlt}>
+              <img src="/checkpoint-update/cozy-composer.png" width="1170" height="2532" alt={post.composerAlt} loading="lazy" decoding="async" />
+            </a>
+            <figcaption>{post.composerCaption}</figcaption>
+          </figure>
+        </section>
+        <section class="reading-copy">
+          <h2>{post.widgetsTitle}</h2>
+          <p>{post.widgetsBody}</p>
+          <h2>{post.catalogTitle}</h2>
+          <p>{post.catalogBody}</p>
+          <p><a href={"/" + lang + "/privacy-policy/"}>{post.privacyLabel}</a></p>
+          <h2>{post.endingTitle}</h2>
+          <p>{post.endingBody}</p>
+        </section>
+        <section class="post-cta">
+          <div><h2>{post.ctaTitle}</h2><p>{post.ctaBody}</p></div>
+          <a class="button" href="https://apps.apple.com/app/id6766421117" target="_blank" rel="noreferrer">{post.ctaLabel}</a>
+        </section>
+        <p><a href={"/" + lang + "/blog/"}>← {post.backLabel}</a></p>
+      </article>
+    </main>
+    <Footer lang={lang} labels={t.nav} />
+  </div>
+</BaseLayout>
+
+<style>
+  .update-title { max-width: 1040px; }
+  .update-meta { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; font-size: .9rem; }
+  .update-meta span { padding: 5px 12px; background: #eadfce; border-radius: 4px; color: #4d3928; font-weight: 700; }
+  .update-meta time { font-size: .9rem; }
+  .update-content { width: 100%; }
+  .release-note { max-width: 760px; margin: 0 0 28px; padding: 18px 22px; border-left: 3px solid #9b6846; background: #f1e8dc; line-height: 1.6; }
+  .update-hero { margin: 0 0 36px; }
+  .update-hero img { display: block; width: 100%; height: auto; border-radius: 8px; }
+  figcaption { margin-top: 10px; font-size: .87rem; line-height: 1.5; color: var(--muted); }
+  .reading-copy { max-width: 760px; }
+  .skin-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; margin: 28px 0 18px; }
+  .skin-preview { min-width: 0; }
+  .skin-preview h3 { margin: 0 0 10px; font-size: 1.12rem; }
+  .skin-preview > p { min-height: 155px; font-size: .95rem; line-height: 1.55; }
+  .skin-preview figure { margin: 18px 0; }
+  .skin-preview img { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid #dacdbf; }
+  .skin-preview .widget-preview { max-width: 185px; margin-top: 24px; }
+  .widget-preview img { border: none; border-radius: 0; }
+  .capture-note { color: var(--muted); font-size: .86rem; max-width: 760px; margin-bottom: 40px; }
+  .quick-preview { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 48px; align-items: start; margin: 40px 0; }
+  .quick-preview figure { margin: 0; }
+  .quick-preview img { display: block; width: 100%; height: auto; border: 1px solid #dacdbf; border-radius: 8px; }
+  blockquote { margin: 24px 0; padding: 15px 20px; border-left: 3px solid #9b6846; background: #f1e8dc; font-size: 1.15rem; line-height: 1.5; }
+  @media (max-width: 900px) {
+    .skin-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+    .skin-preview > p { min-height: 90px; }
+    .skin-preview .widget-preview { max-width: 190px; }
+    .quick-preview { grid-template-columns: minmax(0, 1fr) 230px; gap: 28px; }
+  }
+  @media (max-width: 600px) {
+    .skin-grid { gap: 28px 16px; }
+    .skin-preview > p { min-height: 190px; font-size: .9rem; }
+    .skin-preview h3 { font-size: 1rem; }
+    .skin-preview .widget-preview { max-width: 100%; }
+    .quick-preview { display: block; }
+    .quick-preview figure { width: min(100%, 300px); margin: 28px auto 0; }
+    .release-note { padding: 14px 17px; }
+  }
+  @media (max-width: 440px) {
+    .skin-grid { grid-template-columns: 1fr; gap: 36px; }
+    .skin-preview > p { min-height: 0; }
+    .skin-preview figure { max-width: 300px; }
+    .skin-preview .widget-preview { max-width: 185px; }
+  }
+</style>

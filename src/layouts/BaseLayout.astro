@@ -3,6 +3,8 @@ const {
   title = "Capybarista",
   description = "Apps iOS independientes, minimalistas y pensadas para el uso diario.",
   lang = "es",
+  image,
+  imageAlt,
 } = Astro.props;
 
 import "../styles/global.css";
@@ -17,6 +19,15 @@ import "@phosphor-icons/web/regular";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    {image && <>
+      <meta property="og:type" content="article" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:image" content={new URL(image, Astro.site).href} />
+      <meta property="og:image:alt" content={imageAlt} />
+      <meta property="og:url" content={new URL(Astro.url.pathname, Astro.site).href} />
+      <meta name="twitter:card" content="summary_large_image" />
+    </>}
     <link rel="icon" type="image/png" href="/capybarista-logo.png" />
   </head>
   <body>
