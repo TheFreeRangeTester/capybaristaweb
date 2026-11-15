@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../../../../layouts/BaseLayout.astro";
+import Header from "../../../../components/Header.astro";
+import Footer from "../../../../components/Footer.astro";
+import { copy, locales, type Locale } from "../../../../i18n";
+
+export function getStaticPaths() { return locales.map((lang) => ({ params: { lang } })); }
+const lang = Astro.params.lang as Locale;
+const t = copy[lang];
+const es = lang === "es";
+const title = es ? "Conversar sobre tus registros de Newen con ChatGPT" : "Talking about your Newen entries with ChatGPT";
+const excerpt = es ? "Una forma opcional de mirar tus registros desde otra perspectiva, con calma y cuidando lo que elegís compartir." : "An optional way to explore your entries from another perspective, at your own pace and with care for what you share.";
+const prompt = es ? `Quiero conversar sobre mis registros de Newen. Usá solo el archivo o los fragmentos que comparta en esta conversación. Preguntame qué período o experiencia quiero explorar si no está claro. Revisá los registros pertinentes antes de responder y empezá con una observación breve y una pregunta abierta. No inventes datos, fechas ni explicaciones.
+
+Recordá que los registros muestran momentos que elegí anotar, no cómo me sentí todo el tiempo. Los patrones o asociaciones no prueban causas. Si hay pocos datos o fechas ambiguas, decímelo. Mi propia interpretación importa.
+
+Seguí mi ritmo: no conviertas la conversación en un plan ni me des consejos si no los pido. Si quiero ideas, ayudame a pensar una o dos opciones pequeñas y voluntarias, sin prometer resultados. No diagnostiques ni reemplaces el apoyo profesional. Si aparece una situación de peligro inmediato, priorizá mi seguridad.` : `I’d like to talk about my Newen entries. Use only the file or excerpts I choose to share in this conversation. If it isn’t clear, ask what period or experience I want to explore. Review the relevant entries before responding, and start with a brief observation and an open question. Don’t invent data, dates, or explanations.
+
+Remember that entries reflect moments I chose to record, not how I felt all the time. Patterns or associations don’t prove causes. Tell me if the data is sparse or dates are ambiguous. My own interpretation matters.
+
+Follow my pace: don’t turn the conversation into a plan or give advice unless I ask. If I want ideas, help me consider one or two small, voluntary options without promising results. Don’t diagnose or replace professional support. If there is immediate danger, prioritize my safety.`;
+---
+<BaseLayout title={`${title} · Capybarista`} description={excerpt} lang={lang} image="/newen-chatgpt/reflexion.png" imageAlt={es ? "Un cuaderno abierto y un teléfono junto a una ventana" : "An open notebook and a phone beside a window"}>
+  <div class="page"><Header lang={lang} labels={t.nav} /><main class="shell">
+    <header class="page-title"><h1>{title}</h1><p>{excerpt}</p></header>
+    <article class="content post-content">
+      <figure class="post-hero-image"><img src="/newen-chatgpt/reflexion.png" width="1672" height="941" alt={es ? "Un cuaderno abierto y un teléfono junto a una ventana" : "An open notebook and a phone beside a window"} /></figure>
+      {es ? <div class="reading-copy">
+        <p>A veces, al mirar hacia atrás, es difícil recordar cómo atravesamos una etapa. Los registros pueden ayudarnos a volver a esos momentos, y una conversación puede abrir preguntas que no se nos habían ocurrido.</p>
+        <p>Si usás ChatGPT y te sentís cómodo compartiendo parte de tu información, podés usarlo para explorar tus registros de Newen. Es una opción personal: Newen funciona sin ChatGPT y no necesitás hacerlo para aprovechar la app.</p>
+        <h2>Antes de compartir</h2>
+        <p>El backup actual contiene tu historial de ánimo y puede incluir notas y contextos personales. No ofrece todavía una selección por fechas ni una opción para excluir notas. Revisá lo que estás por compartir y elegí solo lo que te resulte cómodo; también podés compartir un fragmento o escribir un resumen en lugar del archivo completo.</p>
+        <p>Al adjuntar algo a ChatGPT, esa información sale de Newen y se procesa en ChatGPT, según tu configuración y las condiciones de OpenAI. Revisá sus controles de datos y privacidad antes de decidir. Capybarista no recibe el archivo por este proceso.</p>
+        <h2>Cómo empezar</h2>
+        <ol><li>En Newen, abrí el menú de más opciones (•••) y elegí <strong>Exportar backup</strong>. Guardá el archivo JSON en Archivos.</li><li>Abrí ChatGPT y empezá una conversación. Adjuntá el archivo o compartí solo un fragmento o resumen que quieras usar. La posibilidad de adjuntar archivos y sus límites dependen de tu cuenta.</li><li>Copiá el texto de abajo, pegalo en la conversación y contá qué período o experiencia querés explorar.</li></ol>
+        <h2>Un punto de partida para la conversación</h2>
+        <p>No hace falta crear un skill ni instalar un plugin. Podés cambiar el texto para que refleje lo que necesitás.</p>
+      </div> : <div class="reading-copy">
+        <p>Sometimes, looking back, it is hard to remember what a period of life felt like. Entries can bring those moments back into view, and a conversation can open up questions we had not thought to ask.</p>
+        <p>If you use ChatGPT and feel comfortable sharing some of your information, you can use it to explore your Newen entries. This is entirely optional: Newen works without ChatGPT, and you do not need to do this to use the app.</p>
+        <h2>Before you share</h2>
+        <p>The current backup contains your mood history and may include personal notes and contexts. It does not yet let you choose dates or exclude notes. Review what you are sharing and choose only what feels comfortable; you can share an excerpt or write a summary instead of uploading the whole file.</p>
+        <p>When you attach something to ChatGPT, that information leaves Newen and is processed by ChatGPT under your settings and OpenAI’s terms. Review its data and privacy controls before deciding. Capybarista does not receive the file through this process.</p>
+        <h2>How to get started</h2>
+        <ol><li>In Newen, open the more options menu (•••) and choose <strong>Export Backup</strong>. Save the JSON file to Files.</li><li>Open ChatGPT and start a conversation. Attach the file or share only an excerpt or summary you want to use. File upload availability and limits depend on your account.</li><li>Copy the text below, paste it into the conversation, and say which period or experience you would like to explore.</li></ol>
+        <h2>A starting point for the conversation</h2>
+        <p>You do not need to create a skill or install a plugin. Feel free to change the text to reflect what you need.</p>
+      </div>}
+      <section class="prompt-box"><pre id="newen-prompt">{prompt}</pre><button type="button" id="copy-prompt" data-copied={es ? "Copiado" : "Copied"} data-error={es ? "Seleccioná el texto para copiarlo" : "Select the text to copy it"}>{es ? "Copiar prompt" : "Copy prompt"}</button><span id="copy-status" role="status" aria-live="polite"></span></section>
+      {es ? <div class="reading-copy"><h2>Una conversación, no una respuesta definitiva</h2><p>Podés preguntar, por ejemplo: «¿Qué aparece en mis registros de las últimas semanas?» o «Quiero entender cómo viví ese cambio de trabajo». Y si querés ideas concretas, podés pedirlas después.</p><p>Los registros son momentos que elegiste guardar, no una medición continua. Una coincidencia entre ánimo y contexto no demuestra que una cosa haya causado la otra. ChatGPT puede equivocarse y tu propia mirada es importante.</p><p>Esta herramienta no diagnostica ni reemplaza atención profesional. Si algo te preocupa o necesitás apoyo, hablar con alguien de confianza o con un profesional puede ayudarte.</p><p><a href={`/${lang}/blog/`}>← Volver al blog</a></p></div> : <div class="reading-copy"><h2>A conversation, not a definitive answer</h2><p>You might ask, “What shows up in my entries over the past few weeks?” or “I’d like to understand how I experienced that change at work.” If you want practical ideas, you can ask for them later.</p><p>Entries are moments you chose to save, not a continuous measurement. A connection between mood and context does not prove that one caused the other. ChatGPT can make mistakes, and your own perspective matters.</p><p>This is not a diagnosis or a replacement for professional care. If something is troubling you or you need support, talking to someone you trust or a professional may help.</p><p><a href={`/${lang}/blog/`}>← Back to the blog</a></p></div>}
+    </article>
+  </main><Footer lang={lang} labels={t.nav} /></div>
+</BaseLayout>
+<style>
+.prompt-box { background: var(--surface, #f5f3ec); border: 1px solid #d8d8cd; border-radius: 16px; padding: 1.25rem; margin: 1.5rem 0 2rem; }
+.prompt-box pre { white-space: pre-wrap; overflow-wrap: anywhere; font: inherit; line-height: 1.65; margin: 0 0 1rem; }
+.prompt-box button { cursor: pointer; border: 1px solid #405a4e; border-radius: 999px; padding: .65rem 1rem; color: #fff; background: #405a4e; font: inherit; }
+.prompt-box button:focus-visible { outline: 3px solid #bd9b52; outline-offset: 3px; }
+.prompt-box span { margin-left: .75rem; }
+</style>
+<script>
+const button = document.querySelector<HTMLButtonElement>("#copy-prompt");
+const prompt = document.querySelector<HTMLElement>("#newen-prompt");
+const status = document.querySelector<HTMLElement>("#copy-status");
+button?.addEventListener("click", async () => { if (!prompt || !status) return; try { await navigator.clipboard.writeText(prompt.textContent || ""); status.textContent = button.dataset.copied || ""; } catch { status.textContent = button.dataset.error || ""; } });
+</script>

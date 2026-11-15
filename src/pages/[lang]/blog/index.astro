@@ -58,6 +58,15 @@ const imageAlts =
         />
         <PostCard
           app="Newen"
+          title={lang === "es" ? "Conversar sobre tus registros de Newen con ChatGPT" : "Talking about your Newen entries with ChatGPT"}
+          href={`/${lang}/blog/newen/conversar-con-chatgpt/`}
+          excerpt={lang === "es" ? "Una forma opcional de explorar tus registros, con calma y cuidando lo que compartís." : "An optional way to explore your entries, at your own pace and with care for what you share."}
+          cta={t.home.readGuide}
+          imageSrc="/newen-chatgpt/reflexion.png"
+          imageAlt={lang === "es" ? "Un cuaderno abierto y un teléfono junto a una ventana" : "An open notebook and a phone beside a window"}
+        />
+        <PostCard
+          app="Newen"
           title={t.posts.newen.title}
           href={`/${lang}/blog/newen/rutina-ligera/`}
           excerpt={t.posts.newen.excerpt}
